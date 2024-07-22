@@ -1,0 +1,116 @@
+/* @theme mamansoft */
+@import "gaia";
+
+/* フッター */
+footer {
+  text-align: center;
+  font-size: 50%;
+}
+
+/* レイアウト構成 (directive指定想定) */
+section.full {
+  padding: 0;
+  margin: 0;
+}
+
+section.side-5-5 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 5fr 5fr;
+  column-gap: 48px;
+}
+section.side-5-5 h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  grid-column: 1 / -1;
+}
+
+section.side-3-7 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 3fr 7fr;
+  row-gap: 16px;
+  column-gap: 48px;
+}
+section.side-3-7 h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  grid-column: 1 / -1;
+}
+
+section.side-2-8 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 2fr 8fr;
+  row-gap: 16px;
+  column-gap: 48px;
+}
+section.side-2-8 h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  grid-column: 1 / -1;
+}
+
+section.blockquote-side-2-8 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 2fr 8fr;
+  row-gap: 16px;
+  column-gap: 48px;
+}
+section.blockquote-side-2-8 h1,
+h2,
+h3,
+h4,
+blockquote {
+  grid-column: 1 / -1;
+}
+
+/* レイアウト内構成 */
+section blockquote {
+  font-size: 75%;
+  background-color: white;
+  padding: 48px;
+}
+section blockquote a {
+  display: block;
+  margin-top: 24px;
+  font-size: 75%;
+  text-align: end;
+  text-decoration: none;
+}
+section blockquote a::after {
+  content: " より引用";
+  font-size: 75%;
+  color: gray;
+}
+
+/* 要素 */
+section .note {
+  font-size: 70%;
+  color: gray;
+}
+
+section p:has(> img[alt~="center"]) {
+  text-align: center;
+}
+section img[alt~="full"] {
+  width: 100%;
+}
+
+section.narration-white > p {
+  color: white;
+  padding: 24px;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #00000080;
+}
