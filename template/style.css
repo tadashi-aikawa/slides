@@ -1,13 +1,23 @@
 /* @theme mamansoft */
 @import "gaia";
 
+/* 変数 */
+:root {
+  --color-primary: rgb(69, 90, 100);
+  --color-secondary: rgb(107, 114, 128);
+  --color-ghoast: rgb(184, 188, 197);
+}
+
 /* 基本 */
 section {
   padding: 15px 45px;
 }
+
+/* ページタイトル */
 section:not(.lead) > h2 {
   font-size: 1em;
   font-weight: 700;
+  margin-left: -0.5em;
 }
 section:not(.lead) > h2::before {
   content: "";
@@ -27,23 +37,33 @@ section:not(.lead) > h2::before {
 * {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
   font-style: normal;
+}
+
+/* 装飾 */
+section s {
+  text-decoration: none;
+  color: var(--color-ghoast);
 }
 
 /* 色 */
 .text-primary {
   /* 基本は指定不要 */
-  color: rgb(69, 90, 100);
+  color: var(--color-primary);
 }
 .text-secondary {
-  color: rgb(107, 114, 128);
+  color: var(--color-secondary);
 }
 
 /* フッター */
 footer {
   text-align: center;
   font-size: 50%;
+}
+
+/* テーブル */
+table {
+  font-size: 80%;
 }
 
 /* レイアウト構成 (directive指定想定) */
@@ -100,21 +120,6 @@ h3,
 h4,
 h5,
 h6 {
-  grid-column: 1 / -1;
-}
-
-section.blockquote-side-2-8 {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 2fr 8fr;
-  row-gap: 16px;
-  column-gap: 48px;
-}
-section.blockquote-side-2-8 h1,
-h2,
-h3,
-h4,
-blockquote {
   grid-column: 1 / -1;
 }
 
