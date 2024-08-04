@@ -112,7 +112,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## 画像のセンタリング
 
-![neovim-girl center w:800](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
+![neovim-girl center w:960](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
 
 ---
 
@@ -131,3 +131,34 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ![bg neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
 
+---
+
+## コードブロック
+
+```lua
+return {
+  dir = "~/git/github.com/tadashi-aikawa/ghostwriter.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+  keys = {
+    { "<C-j>m", ":Ghostwrite<CR>", silent = true },
+  },
+  config = function()
+    require("ghostwriter").setup({
+      check = {
+        { mark = "~", emoji = "loading" },
+        { mark = "x", emoji = "ok_green" },
+        { mark = "_", emoji = "rip" },
+        { mark = "-", emoji = "togowl_pause" },
+        { mark = " ", emoji = "circle-success" },
+      },
+      bullet = {
+        emoji = "diamond_shape_with_a_dot_inside",
+      },
+    })
+  end,
+}
+```
+
+---

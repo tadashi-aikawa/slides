@@ -1,6 +1,28 @@
 /* @theme mamansoft */
 @import "gaia";
 
+/* 基本 */
+section {
+  padding: 15px 45px;
+}
+section:not(.lead) > h2 {
+  font-size: 1em;
+  font-weight: 700;
+}
+section:not(.lead) > h2::before {
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  padding-bottom: 0.25em;
+  margin-right: 0.25em;
+  background-image: url("https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/favicon-64.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/* フォント*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 * {
   font-family: "Noto Sans JP", sans-serif;
