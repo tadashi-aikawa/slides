@@ -17,6 +17,63 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ---
 
+<!-- _class: full side-3-7 side-no-title -->
+
+<div class="flex justify-center items-center">
+  <img src="https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/favicon-128.png" />
+</div>
+
+<div class="py-16">
+  <h1>Tadashi Aikawa</h1>
+  <h5 class="text-secondary">Productivity Creator since 2010</h5>
+  <div class="mt-16 space-y-2 text-2xl">
+    <div>
+      <code class="w-48 text-center">OS</code>
+      <span class="pl-2">Windows <small>(開発はUbuntu on WSL)</small></span>
+    </div>
+    <div>
+      <code class="w-48 text-center">言語</code>
+      <span class="pl-2">TypeScript >> Python = Go = Rust >> Lua</span>
+    </div>
+    <div>
+      <code class="w-48 text-center">エディタ</code>
+      <span class="pl-2">Neovim / Obsidian</span>
+    </div>
+    <div>
+      <code class="w-48 text-center">キーボード</code>
+      <span class="pl-2">HHKB Studio</span>
+    </div>
+    <div>
+      <code class="w-48 text-center">サイト/ブログ</code>
+      <a class="pl-2" href="https://minerva.mamansoft.net/">Minerva</a>
+    </div>
+    <div>
+      <code class="w-48 text-center">GitHub</code>
+      <a class="pl-2" href="https://github.com/tadashi-aikawa">tadashi-aikawa</a>
+    </div>
+    <div>
+      <code class="w-48 text-center">SNS</code>
+      <a class="pl-2" href="https://bsky.app/profile/tadashi-aikawa.bsky.social">
+        @tadashi-aikawa.bsky.social
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 仕事だったら『所属』『代表プロダクト』『入社年』などを入れる -->
+
+---
+
+## アジェンダ
+
+1. テーマ1
+2. テーマ2
+3. テーマ3
+4. テーマ4
+5. まとめ
+
+---
+
 ## 利用できるclass
 
 | クラス名            | 用途                        |
@@ -41,13 +98,20 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## 周囲のパディングやマージンなし
 
 - hogehoge
-- hogehoge
+  - hogehoge
 
 ---
 
 ## 画像のセンタリング
 
 ![neovim-girl center w:800](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
+
+---
+
+<!-- 画像一枚 -->
+<!-- _class: full lead -->
+
+![bg neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
 
 ---
 

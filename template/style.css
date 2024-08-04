@@ -1,6 +1,23 @@
 /* @theme mamansoft */
 @import "gaia";
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+* {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 色 */
+.text-primary {
+  /* 基本は指定不要 */
+  color: rgb(69, 90, 100);
+}
+.text-secondary {
+  color: rgb(107, 114, 128);
+}
+
 /* フッター */
 footer {
   text-align: center;
@@ -11,6 +28,10 @@ footer {
 section.full {
   padding: 0;
   margin: 0;
+}
+
+section.side-no-title {
+  grid-template-rows: 1fr !important;
 }
 
 section.side-5-5 {
