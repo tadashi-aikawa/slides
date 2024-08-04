@@ -139,13 +139,13 @@ section blockquote a {
 section blockquote a::after {
   content: " より引用";
   font-size: 75%;
-  color: gray;
+  color: var(--color-ghoast);
 }
 
 /* 要素 */
 section .note {
   font-size: 70%;
-  color: gray;
+  color: var(--color-ghoast);
 }
 
 section p:has(> img[alt~="center"]) {

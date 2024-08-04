@@ -198,3 +198,23 @@ return {
 > [📗Vimの思想を取り入れる \- Minerva](https://minerva.mamansoft.net/%F0%9F%93%97Productivity%E3%82%92%E4%B8%8A%E3%81%92%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E5%A4%A7%E5%88%87%E3%81%AA100%E3%81%AE%E3%81%93%E3%81%A8/%F0%9F%93%97Vim%E3%81%AE%E6%80%9D%E6%83%B3%E3%82%92%E5%8F%96%E3%82%8A%E5%85%A5%E3%82%8C%E3%82%8B)
 
 ---
+
+## まとめ
+
+- Marpを使うとMarkdownでスライドを作成できる
+- Neovimで編集できるからスピーディーで快適
+- 良いスライドを作るにはCSSの知識が必須
+- CSSはその場しのぎではなく学びの機会として捉える
+- 可能な限りHTMLを使わずにレイアウトする
+- テンプレスライドを作っておくと一貫性が出るし楽
+- レイアウトが実現できないときはスライド構成に疑問をもつ
+- スライドはできるだけサイトとしてデプロイする
+
+<!--
+paginate: false
+backgroundImage: url("https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Attachments/mimizou-momochi.gif")
+_backgroundSize: 100px
+_backgroundPosition: right bottom
+-->
+
+---
