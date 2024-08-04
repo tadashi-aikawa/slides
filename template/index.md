@@ -20,13 +20,13 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 <!-- _class: full side-3-7 side-no-title -->
 
 <div class="flex justify-center items-center">
-  <img src="https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/favicon-128.png" />
+  <img src="https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/Pasted%20image%2020210605212644.png" height="100%" />
 </div>
 
-<div class="py-16">
+<div class="py-12">
   <h1>Tadashi Aikawa</h1>
   <h5 class="text-secondary">Productivity Creator since 2010</h5>
-  <div class="mt-16 space-y-2 text-2xl">
+  <div class="mt-12 space-y-2 text-2xl">
     <div>
       <code class="w-48 text-center">OS</code>
       <span class="pl-2">Windows <small>(開発はUbuntu on WSL)</small></span>
@@ -56,6 +56,14 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
       <a class="pl-2" href="https://bsky.app/profile/tadashi-aikawa.bsky.social">
         @tadashi-aikawa.bsky.social
       </a>
+    </div>
+    <div>
+      <code class="w-48 text-center">好き</code>
+      <span class="pl-2">創作活動・温泉・甘味・動物(ぬいぐるみ含む)</span>
+    </div>
+    <div>
+      <code class="w-48 text-center">苦手</code>
+      <span class="pl-2">お酒・車・勉強</span>
     </div>
   </div>
 </div>
