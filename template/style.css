@@ -7,39 +7,34 @@
   --color-background: #fff;
   --color-primary: #3db680;
   --color-secondary: #ce579b;
+  --color-dimmed-background: #f8f6f1;
   --color-ghoast: rgb(184, 188, 197);
 }
 
 /* 基本 */
 section {
   padding: 15px 45px;
-}
-
-section h1 {
-  color: var(--color-primary);
-}
-/* ページタイトル */
-section > h2 {
-  text-align: center;
-}
-section:not(.lead) > h2 {
-  font-size: 1em;
-  font-weight: 700;
-}
-
-/* フォント*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-* {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-/* 装飾 */
-section s {
-  text-decoration: none;
-  color: var(--color-ghoast);
+section h1 {
+  color: var(--color-primary);
 }
+section > h2 {
+  color: var(--color-primary);
+}
+section:not(.lead) > h2 {
+  font-size: 1.3em;
+}
+
+ul > li {
+  font-size: 0.9em;
+}
+
+/* フォント*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 
 /* 色 */
 .text-foreground {
@@ -57,16 +52,36 @@ section s {
 .text-ghoast {
   color: var(--color-ghoast);
 }
+section.text-dimmed-background * {
+  color: var(--color-dimmed-background);
+}
+
+/* 装飾 */
+section strong em {
+  color: var(--color-secondary);
+}
+section s {
+  text-decoration: none;
+  color: var(--color-ghoast);
+}
 
 /* フッター */
 footer {
   text-align: center;
-  font-size: 50%;
+  font-size: 0.5em;
 }
 
 /* テーブル */
 table {
-  font-size: 80%;
+  font-size: 0.8em;
+}
+section table thead th {
+  background-color: var(--color-dimmed);
+  border-color: var(--color-background);
+}
+section table tbody tr,
+section table tbody td {
+  border-color: var(--color-background);
 }
 
 /* レイアウト構成 (directive指定想定) */
@@ -129,8 +144,12 @@ h6 {
 /* レイアウト内構成 */
 section blockquote {
   font-size: 75%;
-  background-color: white;
+  background-color: var(--color-dimmed-background);
   padding: 48px;
+}
+section blockquote:before,
+section blockquote:after {
+  padding: 0.75em;
 }
 section blockquote a {
   display: block;
@@ -142,13 +161,13 @@ section blockquote a {
 section blockquote a::after {
   content: " より引用";
   font-size: 75%;
-  color: var(--color-ghoast);
+  color: var(--color-dimmed);
 }
 
 /* 要素 */
 section .note {
   font-size: 70%;
-  color: var(--color-ghoast);
+  color: var(--color-dimmed);
 }
 
 section p:has(> img[alt~="center"]) {
