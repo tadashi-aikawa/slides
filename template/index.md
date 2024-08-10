@@ -2,8 +2,6 @@
 theme: mamansoft
 _class: lead
 paginate: true
-backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
 <script src="https://cdn.tailwindcss.com/3.4.4"></script>
@@ -11,9 +9,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 # テンプレート
 
-### yyyy-mm-dd title
+##### yyyy-mm-dd title
 
-#### tadashi-aikawa
+tadashi-aikawa
 
 ---
 
@@ -24,8 +22,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 </div>
 
 <div class="py-12">
-  <h1>Tadashi Aikawa</h1>
-  <h5 class="text-secondary">Productivity Creator since 2010</h5>
+  <h1 class="text-foreground">Tadashi Aikawa</h1>
+  <h5 class="text-dimmed">Productivity Creator since 2010</h5>
   <div class="mt-12 space-y-2 text-2xl">
     <div>
       <code class="w-48 text-center">OS</code>
@@ -40,21 +38,15 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
       <span class="pl-2">Neovim / Obsidian</span>
     </div>
     <div>
-      <code class="w-48 text-center">キーボード</code>
-      <span class="pl-2">HHKB Studio</span>
+      <code class="w-48 text-center">デバイス</code>
+      <span class="pl-2">EIZO / HHKB Studio / SlimBlade</span>
     </div>
     <div>
-      <code class="w-48 text-center">サイト/ブログ</code>
+      <code class="w-48 text-center">サイト</code>
       <a class="pl-2" href="https://minerva.mamansoft.net/">Minerva</a>
-    </div>
-    <div>
-      <code class="w-48 text-center">GitHub</code>
-      <a class="pl-2" href="https://github.com/tadashi-aikawa">tadashi-aikawa</a>
-    </div>
-    <div>
-      <code class="w-48 text-center">SNS</code>
+      <a class="pl-2" href="https://github.com/tadashi-aikawa">GitHub</a>
       <a class="pl-2" href="https://bsky.app/profile/tadashi-aikawa.bsky.social">
-        @tadashi-aikawa.bsky.social
+        Bluesky
       </a>
     </div>
     <div>
@@ -64,6 +56,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
     <div>
       <code class="w-48 text-center">苦手</code>
       <span class="pl-2">お酒・車・勉強</span>
+    </div>
+    <div>
+      <code class="w-48 text-center">楽しい仕事</code>
+      <span class="pl-2">個人/チームを成長させて成果を出すこと</span>
     </div>
   </div>
 </div>
