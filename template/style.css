@@ -3,8 +3,10 @@
 
 /* 変数 */
 :root {
-  --color-primary: rgb(69, 90, 100);
-  --color-secondary: rgb(107, 114, 128);
+  --color-foreground: #595959;
+  --color-background: #fff;
+  --color-primary: #3db680;
+  --color-secondary: #ce579b;
   --color-ghoast: rgb(184, 188, 197);
 }
 
@@ -13,23 +15,16 @@ section {
   padding: 15px 45px;
 }
 
+section h1 {
+  color: var(--color-primary);
+}
 /* ページタイトル */
+section > h2 {
+  text-align: center;
+}
 section:not(.lead) > h2 {
   font-size: 1em;
   font-weight: 700;
-  margin-left: -0.5em;
-}
-section:not(.lead) > h2::before {
-  content: "";
-  display: inline-block;
-  width: 1.1em;
-  height: 1.1em;
-  padding-bottom: 0.25em;
-  margin-right: 0.25em;
-  background-image: url("https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/favicon-64.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
 }
 
 /* フォント*/
@@ -47,12 +42,20 @@ section s {
 }
 
 /* 色 */
+.text-foreground {
+  color: var(--color-foreground);
+}
 .text-primary {
-  /* 基本は指定不要 */
   color: var(--color-primary);
 }
 .text-secondary {
   color: var(--color-secondary);
+}
+.text-dimmed {
+  color: var(--color-dimmed);
+}
+.text-ghoast {
+  color: var(--color-ghoast);
 }
 
 /* フッター */
