@@ -1,7 +1,6 @@
 ---
 theme: mamansoft
 _class: lead
-paginate: true
 ---
 
 <script src="https://cdn.tailwindcss.com/3.4.4"></script>
@@ -12,6 +11,16 @@ paginate: true
 ##### yyyy-mm-dd title
 
 tadashi-aikawa
+
+---
+
+<!-- _class: full side-3-7 side-no-title -->
+
+<div class="bg-primary">
+  <h2>01</h2>
+</div>
+
+<div>hoge</div>
 
 ---
 
@@ -59,7 +68,7 @@ tadashi-aikawa
     </div>
     <div>
       <code class="w-48 text-center">楽しい仕事</code>
-      <span class="pl-2">個人/チームを成長させて成果を出すこと</span>
+      <span class="pl-2">個人やチームの生産性を上げて成果に繋げる</span>
     </div>
   </div>
 </div>
@@ -108,16 +117,47 @@ tadashi-aikawa
 
 ---
 
+## 基本的な装飾
+
+- **太字**
+- **<em>強調色</em>をつかって**<em>強調する</em>
+- `inline code`
+- ~~とりけし~~線は目立たない色
+
+---
+
+<!-- _class: grid-5-5 -->
+
+## grid-layout
+
+<div>
+
+- hugahuga
+- <img src="https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/favicon-64.png" />
+
+  - hogehoge
+- huga
+</div>
+
+```ts
+const hoge = "hoge"
+```
+
+---
+
 ## 利用できるclass
 
-| クラス名            | 用途                           |
-|---------------------|--------------------------------|
-| side-5-5            | 左右に1:1で分割                |
-| side-3-7            | 左右に3:7で分割                |
-| side-2-8            | 左右に1:4で分割                |
-| blockquote-side-2-8 | 上に引用、下が左右1:4で分割    |
-| full                | 四隅のパディングやマージンなし |
-| narration-white     | 白文字のナレーションを中央に   |
+| クラス名               | 用途                           |
+|------------------------|--------------------------------|
+| lead                   | 中央寄せ                       |
+| side-5-5               | 左右に1:1で分割                |
+| side-3-7               | 左右に3:7で分割                |
+| side-2-8               | 左右に1:4で分割                |
+| side-no-title          | 左右分割でタイトルなし         |
+| blockquote-side-2-8    | 上に引用、下が左右1:4で分割    |
+| full                   | 四隅のパディングやマージンなし |
+| narration-white        | 白文字のナレーションを中央に   |
+| text-dimmed-background | 暗転背景にテキスト             |
 
 ---
 
