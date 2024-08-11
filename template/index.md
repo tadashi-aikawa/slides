@@ -16,16 +16,6 @@ tadashi-aikawa
 
 <!-- _class: full side-3-7 side-no-title -->
 
-<div class="bg-primary">
-  <h2>01</h2>
-</div>
-
-<div>hoge</div>
-
----
-
-<!-- _class: full side-3-7 side-no-title -->
-
 <div class="flex justify-center items-center">
   <img src="https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/Pasted%20image%2020210605212644.png" height="100%" />
 </div>
@@ -77,52 +67,100 @@ tadashi-aikawa
 
 ---
 
-## アジェンダ
+<!-- _class: chapter-divider -->
 
-1. テーマ1
-2. テーマ2
-3. テーマ3
-4. テーマ4
+<div class="left">
+
+## Agenda
+
+</div>
+
+<div class="right">
+
+1. はじめに
+2. 基本的な装飾
+3. レイアウトテンプレート
+4. スライドテンプレート
 5. まとめ
 
----
-
-## アジェンダ
-
-1. **テーマ1**
-2. ~~テーマ2~~
-3. ~~テーマ3~~
-4. ~~テーマ4~~
-5. ~~まとめ~~
+</div>
 
 ---
 
-## アジェンダ
+<!-- _class: chapter-divider -->
 
-1. ~~テーマ1~~
-2. **テーマ2**
-3. ~~テーマ3~~
-4. ~~テーマ4~~
-5. ~~まとめ~~
+<div class="left">
+
+### Chapter
+
+## 01
+
+</div>
+
+<div class="right">
+
+1. **はじめに**
+2. 基本的な装飾
+3. レイアウトテンプレート
+4. スライドテンプレート
+5. まとめ
+
+</div>
 
 ---
 
-## メッセージ
+## このスライドを作成した目的
 
-ここに普通にメッセージを書く想定です。そのあとに...
+- [Marp]に慣れる
+- スライド作成スピードを上げる
+- デザインクオリティを安定させる
+- HTMLを極力使わずMarkdownで作成する
+- デザイン/CSSスキルを向上させる
 
-- hoge
-- hoge
-- hoge
+<footer>
+
+[Marp: Markdown Presentation Ecosystem](https://marp.app/)
+
+</footer>
 
 ---
 
-## 基本的な装飾
+<!-- _class: chapter-divider -->
 
-- **太字**
-- **<em>強調色</em>をつかって**<em>強調する</em>
-- `inline code`
-- ~~とりけし~~線は目立たない色
+<div class="left">
+
+### Chapter
+
+## 02
+
+</div>
+
+<div class="right">
+
+1. ~~はじめに~~
+2. **基本的な装飾**
+3. レイアウトテンプレート
+4. スライドテンプレート
+5. まとめ
+
+</div>
+
+---
+
+## インライン装飾
+
+| 記法                        | プレビュー                |
+|-----------------------------|---------------------------|
+| `**string**`                | **string**                |
+| `_emphasis`                 | _emphasis_                |
+| `~~mute~~`                  | ~~mute~~                  |
+| `[link](https://marp.app/)` | [link](https://marp.app/) |
+
+---
+
+## ブロック装飾
+
+
 
 ---
 
@@ -279,3 +317,5 @@ _backgroundPosition: right bottom
 -->
 
 ---
+
+[Marp]: https://marp.app/
