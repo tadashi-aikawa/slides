@@ -310,6 +310,38 @@ return {
 
 ---
 
+## 3つのトピックについて水平箇条書き
+
+<div class="grid-col-div-3 mt-12">
+
+![muscle w:3em](./resources/muscle.png)
+
+![muscle w:3em](./resources/muscle.png)
+
+![muscle w:3em](./resources/muscle.png)
+
+</div>
+
+<div class="grid-col-div-3 pt-4 pb-6">
+  <div class="text-3xl font-bold">1から何かをつくる</div>
+  <div class="text-3xl font-bold">Productivity</div>
+  <div class="text-3xl font-bold">ふんわり</div>
+</div>
+
+<div class="grid-col-div-3" style="place-items: start;">
+  <div class="text-2xl">
+  提供したい価値があり、作りたいモノや予定がハッキリ決まっていない状態から、動くモノをつくりながらプロダクトに仕上げていくのが好き。特に自分が使うモノだとやる気10倍。
+  </div>
+  <div class="text-2xl">
+  個人やチームの生産性を向上させるようなツール・仕組みをつくるのが好き。ただし、当人たちが望んでいる場合に限るので、外からの圧力で無理やり改善を進めていくのは好きじゃない。
+  </div>
+  <div class="text-2xl">
+  なんとなくやりたいことはあるのだけど、誰が何をどうやって進めるのかがフワフワしているモノを進めていくのは得意。いわゆる優しい丸投げ。好きかと言われると微妙な気はするけど。
+  </div>
+</div>
+
+---
+
 ## 画像のセンタリング
 
 ![neovim-girl center w:960](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)

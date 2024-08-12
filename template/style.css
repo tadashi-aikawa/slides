@@ -433,3 +433,9 @@ section .grid-col-3-7 {
   column-gap: 1em;
   align-items: center;
 }
+section .grid-col-div-3 {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 5%;
+  place-items: center;
+}
