@@ -163,15 +163,30 @@ footer {
 
 /* テーブル */
 table {
-  font-size: 0.8em;
+  font-size: 0.75em;
 }
 section table thead th {
-  background-color: var(--color-dimmed);
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  padding: 0.5em 1em;
+  text-align: start;
   border-color: var(--color-background);
+  border-bottom-color: var(--color-primary);
+  border-bottom-width: 2px;
 }
 section table tbody tr,
 section table tbody td {
+  font-size: 0.95em;
+  padding: 0.5em 1em;
   border-color: var(--color-background);
+  border-bottom-color: var(--color-dimmed);
+}
+
+section table tbody tr:nth-child(odd) td {
+  padding: 0.5em 1em;
+  border-color: var(--color-background);
+  border-bottom-color: var(--color-dimmed);
+  background-color: var(--color-background);
 }
 
 /******************************
@@ -195,11 +210,10 @@ section.narration-white > p {
 section.text-dimmed-background * {
   color: var(--color-dimmed-background);
 }
-/* 線なしテーブル */
-section.borderless-table th,
-section.borderless-table tr:nth-child(odd) td {
-  color: var(--color-foreground);
-  background-color: var(--color-background);
+/* ヘッダなしテーブル */
+section.headless-table table thead th {
+  border-bottom-color: var(--color-dimmed);
+  border-bottom-width: 1px;
 }
 
 /******************************

@@ -179,7 +179,7 @@ tadashi-aikawa
 
 ---
 
-<!-- _class: borderless-table -->
+<!-- _class: headless-table -->
 
 ## インライン装飾
 
