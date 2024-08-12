@@ -1,6 +1,7 @@
 ---
 theme: mamansoft
 _class: lead
+paginate: true
 ---
 
 <script src="https://cdn.tailwindcss.com/3.4.4"></script>
@@ -14,51 +15,47 @@ tadashi-aikawa
 
 ---
 
-<!-- _class: full side-3-7 side-no-title -->
+![bg left:30%](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/Pasted%20image%2020210605212644.png)
 
-<div class="flex justify-center items-center">
-  <img src="https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/Pasted%20image%2020210605212644.png" height="100%" />
-</div>
-
-<div class="py-12">
+<div>
   <h1 class="text-foreground">Tadashi Aikawa</h1>
   <h5 class="text-dimmed">Productivity Creator since 2010</h5>
   <div class="mt-12 space-y-2 text-2xl">
     <div>
-      <code class="w-48 text-center">OS</code>
-      <span class="pl-2">Windows <small>(開発はUbuntu on WSL)</small></span>
+      <div class="label">OS</div>
+      <span class="pl-3">Windows <small>(開発はUbuntu on WSL)</small></span>
     </div>
     <div>
-      <code class="w-48 text-center">言語</code>
-      <span class="pl-2">TypeScript >> Python = Go = Rust >> Lua</span>
+      <div class="label">言語</div>
+      <span class="pl-3">TypeScript >> Python = Go = Rust >> Lua</span>
     </div>
     <div>
-      <code class="w-48 text-center">エディタ</code>
-      <span class="pl-2">Neovim / Obsidian</span>
+      <div class="label">エディタ</div>
+      <span class="pl-3">Neovim / Obsidian</span>
     </div>
     <div>
-      <code class="w-48 text-center">デバイス</code>
-      <span class="pl-2">EIZO / HHKB Studio / SlimBlade</span>
+      <div class="label">デバイス</div>
+      <span class="pl-3">EIZO / HHKB Studio / SlimBlade</span>
     </div>
     <div>
-      <code class="w-48 text-center">サイト</code>
-      <a class="pl-2" href="https://minerva.mamansoft.net/">Minerva</a>
-      <a class="pl-2" href="https://github.com/tadashi-aikawa">GitHub</a>
-      <a class="pl-2" href="https://bsky.app/profile/tadashi-aikawa.bsky.social">
+      <div class="label">サイト</div>
+      <a class="pl-3" href="https://minerva.mamansoft.net/">Minerva</a>
+      <a class="pl-3" href="https://github.com/tadashi-aikawa">GitHub</a>
+      <a class="pl-3" href="https://bsky.app/profile/tadashi-aikawa.bsky.social">
         Bluesky
       </a>
     </div>
     <div>
-      <code class="w-48 text-center">好き</code>
-      <span class="pl-2">創作活動・温泉・甘味・動物(ぬいぐるみ含む)</span>
+      <div class="label">好き</div>
+      <span class="pl-3">創作活動・温泉・甘味・動物(ぬいぐるみ含む)</span>
     </div>
     <div>
-      <code class="w-48 text-center">苦手</code>
-      <span class="pl-2">お酒・車・勉強</span>
+      <div class="label">苦手</div>
+      <span class="pl-3">お酒・車・勉強</span>
     </div>
     <div>
-      <code class="w-48 text-center">楽しい仕事</code>
-      <span class="pl-2">個人やチームの生産性を上げて成果に繋げる</span>
+      <div class="label">楽しい仕事</div>
+      <span class="pl-3">個人やチームの生産性を上げて成果に繋げる</span>
     </div>
   </div>
 </div>
@@ -111,19 +108,10 @@ tadashi-aikawa
 
 ## このスライドを作成した目的
 
-<b>ふと思い立ってCSSやデザインの勉強をしようと思ったんだ</b>
-
-- [Marp]に慣れる
-- スライド作成スピードを上げる
-- デザインクオリティを安定させる
-- HTMLを極力使わずMarkdownで作成する
-- デザイン/CSSスキルを向上させる
-
-<footer>
-
-[Marp: Markdown Presentation Ecosystem](https://marp.app/)
-
-</footer>
+- スライド作成スピードを上げたい
+- デザインを安定させたい
+- 極力Markdownでスライドを作りたい
+- デザイン/CSSのスキルを向上させたい
 
 ---
 
@@ -149,14 +137,57 @@ tadashi-aikawa
 
 ---
 
+## 見出し
+
+<div class="grid-col-2-8">
+
+# Level1
+`# Level1`
+</div>
+
+<div class="grid-col-2-8">
+
+## Level2
+`## Level2`
+</div>
+
+<div class="grid-col-2-8">
+
+### Level3
+`### Level3`
+</div>
+
+<div class="grid-col-2-8">
+
+#### Level4
+`#### Level4`
+</div>
+
+<div class="grid-col-2-8">
+
+##### Level5
+`##### Level5`
+</div>
+
+<div class="grid-col-2-8">
+
+###### Level6
+`###### Level6`
+</div>
+
+
+
+---
+
+<!-- _class: borderless-table -->
+
 ## インライン装飾
 
-| 記法                        | プレビュー                |
-|-----------------------------|---------------------------|
-| `**strong**`                | **strong**                |
-| `_emphasis`                 | _emphasis_                |
-| `~~mute~~`                  | ~~mute~~                  |
-| `[link](https://marp.app/)` | [link](https://marp.app/) |
+|                        |              |   |            |
+|------------------------|--------------|---|------------|
+| 視線を集めたいとき     | `**strong**` | ➡ | **strong** |
+| 強調させたいとき       | `_emphasis_` | ➡ | _emphasis_ |
+| 注意をひきたくないとき | `~~mute~~`   | ➡ | ~~mute~~   |
 
 ---
 
@@ -176,96 +207,6 @@ tadashi-aikawa
 1. 左ぃぃ ヨシ!!
 2. 右ぃぃ ヨシ!!
 3. 日本
-
----
-
-<!-- _class: grid-5-5 -->
-
-## grid-layout
-
-<div>
-
-- hugahuga
-- <img src="https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/favicon-64.png" />
-
-  - hogehoge
-- huga
-</div>
-
-```ts
-const hoge = "hoge"
-```
-
----
-
-## 利用できるclass
-
-| クラス名               | 用途                           |
-|------------------------|--------------------------------|
-| lead                   | 中央寄せ                       |
-| side-5-5               | 左右に1:1で分割                |
-| side-3-7               | 左右に3:7で分割                |
-| side-2-8               | 左右に1:4で分割                |
-| side-no-title          | 左右分割でタイトルなし         |
-| blockquote-side-2-8    | 上に引用、下が左右1:4で分割    |
-| full                   | 四隅のパディングやマージンなし |
-| narration-white        | 白文字のナレーションを中央に   |
-| text-dimmed-background | 暗転背景にテキスト             |
-
----
-
-<!-- _class: lead -->
-
-## 画面中央で
-
-### 語るスライド
-
----
-
-<!-- _class: full -->
-
-## 周囲のパディングやマージンなし
-
-- hogehoge
-  - hogehoge
-
----
-
-## 画像のセンタリング
-
-![neovim-girl center w:960](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
-
----
-
-## 画像のドロップシャドー
-
-![neovim-girl drop-shadow center w:960](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
-
----
-
-<!-- 画像一枚 -->
-<!-- _class: full lead -->
-
-![bg neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
-
----
-
-<!-- _class: full lead narration-white -->
-
-中央に
-黒い半透明背景で
-白文字を出したいとき
-
-![bg neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
-
----
-
-<!-- _class: full lead text-dimmed-background -->
-
-## 画像を黒く暗転して
-## 白文字を出したいとき
-
-![bg brightness:0.25 neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
 
 ---
 
@@ -299,8 +240,110 @@ return {
 
 ---
 
+<!-- _class: chapter-divider -->
+
+<div class="left">
+
+### Chapter
+
+## 03
+
+</div>
+
+<div class="right">
+
+1. ~~はじめに~~
+2. ~~基本的な装飾~~
+3. **レイアウトテンプレート**
+4. スライドテンプレート
+5. まとめ
+
+</div>
+
+---
+
+## directiveに使うclass
+
+| クラス名               | 用途                           |
+|------------------------|--------------------------------|
+| lead                   | 中央寄せ                       |
+| full                   | 四隅のパディングやマージンなし |
+| narration-white        | 白文字のナレーションを中央に   |
+| text-dimmed-background | 暗転背景にテキスト             |
+| borderless-table       | 線のないテーブル               |
+
+---
+
+<!-- _class: chapter-divider -->
+
+<div class="left">
+
+### Chapter
+
+## 04
+
+</div>
+
+<div class="right">
+
+1. ~~はじめに~~
+2. ~~基本的な装飾~~
+3. ~~レイアウトテンプレート~~
+4. **スライドテンプレート**
+5. まとめ
+
+</div>
+
+---
+
 <!-- _class: lead -->
-<!-- 画面中央で引用を紹介 -->
+
+## 画面中央で
+
+### 語るスライド
+
+---
+
+## 画像のセンタリング
+
+![neovim-girl center w:960](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
+
+---
+
+## 画像のドロップシャドー
+
+![neovim-girl drop-shadow center w:960](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/%F0%9F%93%B0Weekly%20Report/attachments/Pasted%20image%2020240812132709.png)
+
+---
+
+<!-- _class: full lead -->
+
+![bg neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
+
+<div class="tag-note">画像をスライド全体に表示</div>
+
+---
+
+<!-- _class: full lead narration-white -->
+
+中央に
+黒い半透明背景で
+白文字を出したいとき
+
+![bg neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
+
+---
+
+<!-- _class: full lead text-dimmed-background -->
+
+## 画像を黒く暗転して
+## 白文字を出したいとき
+
+![bg brightness:0.25 neovim-girl](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/neovim-girl-1280.webp)
+
+---
+
+<!-- _class: lead -->
 
 > もともと私はアンチVimだった。なぜなら、AutoHotkeyを使ってOSレベルで効率的なキーバインドを実現していたからだ。その全容は🦉Spinal reflex bindings templateというリポジトリで管理している。
 > 
@@ -310,6 +353,30 @@ return {
 > 
 > それに気付かせてくれた名著こそが📚実践Vimだ。📚実践Vimを読んで、私ははじめてVimの思想が何たるかを理解することができた。
 > [📗Vimの思想を取り入れる \- Minerva](https://minerva.mamansoft.net/%F0%9F%93%97Productivity%E3%82%92%E4%B8%8A%E3%81%92%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E5%A4%A7%E5%88%87%E3%81%AA100%E3%81%AE%E3%81%93%E3%81%A8/%F0%9F%93%97Vim%E3%81%AE%E6%80%9D%E6%83%B3%E3%82%92%E5%8F%96%E3%82%8A%E5%85%A5%E3%82%8C%E3%82%8B)
+
+<div class="tag-note">画面中央で引用を紹介</div>
+
+---
+
+<!-- _class: chapter-divider -->
+
+<div class="left">
+
+### Chapter
+
+## 05
+
+</div>
+
+<div class="right">
+
+1. ~~はじめに~~
+2. ~~基本的な装飾~~
+3. ~~レイアウトテンプレート~~
+4. ~~スライドテンプレート~~
+5. **まとめ**
+
+</div>
 
 ---
 

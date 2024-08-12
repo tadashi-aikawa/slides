@@ -11,7 +11,34 @@
   --color-ghost: rgb(184, 188, 197);
 }
 
-/* 基本 */
+/* フォント*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+/* 色 */
+.text-foreground {
+  color: var(--color-foreground);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-dimmed {
+  color: var(--color-dimmed);
+}
+.text-ghost {
+  color: var(--color-ghost);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+/******************************
+ * 基本
+ *****************************/
+
+/* 見出し */
 section {
   padding: 1em 2em;
   font-family: "Noto Sans JP", sans-serif;
@@ -21,17 +48,48 @@ section {
 section h1 {
   color: var(--color-primary);
 }
-section > h2 {
-  color: var(--color-primary);
+section h3 {
+  font-size: 1.05em;
 }
+section h4 {
+  font-size: 1em;
+}
+section h5 {
+  font-size: 0.9em;
+}
+section h6 {
+  font-size: 0.8em;
+}
+/* タイトルのh2 */
 section:not(.lead) > h2 {
+  color: var(--color-primary);
   font-size: 1.1em;
 }
 
+/* 段落 */
 section p {
   font-size: 0.9em;
 }
 
+/* コード */
+section code:not([class^="language-"]) {
+  font-size: 0.7em;
+  padding: 0.2em;
+  border-radius: 8px;
+  color: var(--color-secondary);
+  background-color: var(--color-dimmed-background);
+}
+section code[class^="language-"] {
+  padding: 1em;
+  color: var(--color-foreground);
+  background-color: var(--color-dimmed-background);
+}
+section marp-pre {
+  color: var(--color-foreground);
+  background-color: var(--color-dimmed-background);
+}
+
+/* 箇条書き */
 section ul > li {
   font-size: 0.9em;
   position: relative;
@@ -81,34 +139,9 @@ section ol li:before {
   margin-top: -1.4em;
 }
 
+/* リンク */
 section a {
   text-decoration: none;
-}
-
-/* フォント*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-
-/* 色 */
-.text-foreground {
-  color: var(--color-foreground);
-}
-.text-primary {
-  color: var(--color-primary);
-}
-.text-secondary {
-  color: var(--color-secondary);
-}
-.text-dimmed {
-  color: var(--color-dimmed);
-}
-.text-ghost {
-  color: var(--color-ghost);
-}
-.bg-primary {
-  background-color: var(--color-primary);
-}
-section.text-dimmed-background * {
-  color: var(--color-dimmed-background);
 }
 
 /* 装飾 */
@@ -141,64 +174,76 @@ section table tbody td {
   border-color: var(--color-background);
 }
 
-/* レイアウト構成 (directive指定想定) */
+/******************************
+ * Directive
+ *****************************/
+
+/* 余白なし */
 section.full {
   padding: 0;
   margin: 0;
 }
-
-section.side-no-title {
-  grid-template-rows: 1fr !important;
+/* 白文字のナレーション中央 */
+section.narration-white > p {
+  color: white;
+  padding: 24px;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #00000080;
+}
+/* 暗転背景にテキスト */
+section.text-dimmed-background * {
+  color: var(--color-dimmed-background);
+}
+/* 線なしテーブル */
+section.borderless-table th,
+section.borderless-table tr:nth-child(odd) td {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
 }
 
-section.side-5-5 {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 5fr 5fr;
-  column-gap: 48px;
-}
-section.side-5-5 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  grid-column: 1 / -1;
+/******************************
+ * その他
+ *****************************/
+section .note {
+  font-size: 70%;
+  color: var(--color-dimmed);
 }
 
-section.side-3-7 {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 3fr 7fr;
-  row-gap: 16px;
-  column-gap: 48px;
+section p:has(> img[alt~="center"]) {
+  text-align: center;
 }
-section.side-3-7 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  grid-column: 1 / -1;
+section img[alt~="full"] {
+  width: 100%;
 }
 
-section.side-2-8 {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 2fr 8fr;
-  row-gap: 16px;
-  column-gap: 48px;
-}
-section.side-2-8 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  grid-column: 1 / -1;
+section .label {
+  font-size: 0.7em;
+  color: var(--color-dimmed-background);
+  background-color: var(--color-dimmed);
+  text-align: center;
+  display: inline-block;
+  width: 8em;
+  height: 2em;
+  border-radius: 4px;
 }
 
-/* レイアウト内構成 */
+/* 画面右上に補足 */
+section .tag-note {
+  font-size: 0.5em;
+  padding: 0.2em 0.4em;
+  font-weight: bold;
+  filter: opacity(0.85);
+  color: var(--color-dimmed-background);
+  background-color: var(--color-secondary);
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+/******************************
+ * Blockquote
+ *****************************/
 section blockquote {
   font-size: 75%;
   background-color: var(--color-dimmed-background);
@@ -221,47 +266,9 @@ section blockquote a::after {
   color: var(--color-dimmed);
 }
 
-/* 要素 */
-section .note {
-  font-size: 70%;
-  color: var(--color-dimmed);
-}
-
-section p:has(> img[alt~="center"]) {
-  text-align: center;
-}
-section img[alt~="full"] {
-  width: 100%;
-}
-
-section.narration-white > p {
-  color: white;
-  padding: 24px;
-  font-size: 1.5em;
-  font-weight: bold;
-  background-color: #00000080;
-}
-
-/* grid */
-section.grid-5-5 {
-  display: grid;
-  grid-template:
-    "header    header" auto
-    "left      right " 1fr
-    / 50% 50%;
-}
-section.grid-5-5 h2 {
-  grid-area: header;
-}
-section.grid-5-5 .left {
-  background-color: red;
-  grid-area: left;
-}
-section.grid-5-5 .right {
-  background-color: blue;
-  grid-area: right;
-}
-
+/******************************
+ * Chapter
+ *****************************/
 section.chapter-divider {
   padding: 0;
   margin: 0;
@@ -328,4 +335,48 @@ section.chapter-divider ol > li:has(s) {
 section.chapter-divider ol > li:has(s):before {
   color: var(--color-ghost);
   border: dashed 1px var(--color-ghost);
+}
+
+/******************************
+ * Grid layouts
+ *****************************/
+section.grid-5-5 {
+  display: grid;
+  grid-template:
+    "header    header" auto
+    "left      right " 1fr
+    / 50% 50%;
+}
+section.grid-5-5 h2 {
+  grid-area: header;
+}
+section.grid-5-5 .left {
+  grid-area: left;
+}
+section.grid-5-5 .right {
+  grid-area: right;
+}
+
+section.grid-2-8 {
+  display: grid;
+  grid-template:
+    "header    header" auto
+    "left      right " 1fr
+    / 20% 80%;
+}
+section.grid-2-8 h2 {
+  grid-area: header;
+}
+section.grid-2-8 .left {
+  grid-area: left;
+}
+section.grid-2-8 .right {
+  grid-area: right;
+}
+
+section .grid-col-2-8 {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  column-gap: 1em;
+  align-items: center;
 }
