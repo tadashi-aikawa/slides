@@ -162,8 +162,9 @@ footer {
 }
 
 /* テーブル */
-table {
+section table {
   font-size: 0.75em;
+  margin-top: 2em;
 }
 section table thead th {
   color: var(--color-primary);
@@ -391,6 +392,12 @@ section.grid-2-8 .right {
 section .grid-col-2-8 {
   display: grid;
   grid-template-columns: 20% 80%;
+  column-gap: 1em;
+  align-items: center;
+}
+section .grid-col-3-7 {
+  display: grid;
+  grid-template-columns: 30% 70%;
   column-gap: 1em;
   align-items: center;
 }

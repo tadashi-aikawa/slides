@@ -139,55 +139,54 @@ tadashi-aikawa
 
 ## 見出し
 
-<div class="grid-col-2-8">
+<div class="grid-col-3-7">
 
-# Level1
-`# Level1`
+# LEVEL1
+`# LEVEL1`
 </div>
 
-<div class="grid-col-2-8">
+<div class="grid-col-3-7">
 
-## Level2
-`## Level2`
+## LEVEL2
+`## LEVEL2`
 </div>
 
-<div class="grid-col-2-8">
+<div class="grid-col-3-7">
 
-### Level3
-`### Level3`
+### LEVEL3
+`### LEVEL3`
 </div>
 
-<div class="grid-col-2-8">
+<div class="grid-col-3-7">
 
-#### Level4
-`#### Level4`
+#### LEVEL4
+`#### LEVEL4`
 </div>
 
-<div class="grid-col-2-8">
+<div class="grid-col-3-7">
 
-##### Level5
-`##### Level5`
+##### LEVEL5
+`##### LEVEL5`
 </div>
 
-<div class="grid-col-2-8">
+<div class="grid-col-3-7">
 
-###### Level6
-`###### Level6`
+###### LEVEL6
+`###### LEVEL6`
 </div>
 
 
 
 ---
 
-<!-- _class: headless-table -->
-
 ## インライン装飾
 
-|                        |              |   |            |
-|------------------------|--------------|---|------------|
-| 視線を集めたいとき     | `**strong**` | ➡ | **strong** |
-| 強調させたいとき       | `_emphasis_` | ➡ | _emphasis_ |
-| 注意をひきたくないとき | `~~mute~~`   | ➡ | ~~mute~~   |
+| ユースケース           | raw          | 表示       |
+|------------------------|--------------|------------|
+| 強調したいとき         | `**strong**` | **strong** |
+| 強く強調したいとき     | `_emphasis_` | _emphasis_ |
+| 注意をひきたくないとき | `~~mute~~`   | ~~mute~~   |
+| リンク入りテキスト     | `[Marp]`     | [Marp]     |
 
 ---
 
@@ -195,18 +194,22 @@ tadashi-aikawa
 
 ## ブロック装飾
 
-- フルーツ
-  - りんご
-  - みかん
-- 動物
-  - フクロウ
-    - みみぞう
-    - みみこ
-- 日本
+- 箇条書き
+  - ネストにも対応
+- LEVEL1
+  - LEVEL2
+    - LEVEL3
+      - LEVEL4
+        - LEVEL5
+          - LEVEL6
+            - LEVEL7
+              - LEVEL8
 
-1. 左ぃぃ ヨシ!!
-2. 右ぃぃ ヨシ!!
-3. 日本
+1. 番号付きリスト
+1. 数値は
+1. Incrementされて
+1. 順番にふられます
+1. ネストには未対応
 
 ---
 
@@ -271,6 +274,7 @@ return {
 | narration-white        | 白文字のナレーションを中央に   |
 | text-dimmed-background | 暗転背景にテキスト             |
 | borderless-table       | 線のないテーブル               |
+| headless-table         | ヘッダのないテーブル           |
 
 ---
 
@@ -398,6 +402,5 @@ _backgroundSize: 100px
 _backgroundPosition: right bottom
 -->
 
----
 
 [Marp]: https://marp.app/
