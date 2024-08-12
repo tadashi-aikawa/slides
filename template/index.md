@@ -71,7 +71,7 @@ tadashi-aikawa
 
 <div class="left">
 
-## Agenda
+### Agenda
 
 </div>
 
@@ -110,6 +110,8 @@ tadashi-aikawa
 ---
 
 ## このスライドを作成した目的
+
+<b>ふと思い立ってCSSやデザインの勉強をしようと思ったんだ</b>
 
 - [Marp]に慣れる
 - スライド作成スピードを上げる
@@ -151,16 +153,29 @@ tadashi-aikawa
 
 | 記法                        | プレビュー                |
 |-----------------------------|---------------------------|
-| `**string**`                | **string**                |
+| `**strong**`                | **strong**                |
 | `_emphasis`                 | _emphasis_                |
 | `~~mute~~`                  | ~~mute~~                  |
 | `[link](https://marp.app/)` | [link](https://marp.app/) |
 
 ---
 
+<!-- _class: grid-5-5 -->
+
 ## ブロック装飾
 
+- フルーツ
+  - りんご
+  - みかん
+- 動物
+  - フクロウ
+    - みみぞう
+    - みみこ
+- 日本
 
+1. 左ぃぃ ヨシ!!
+2. 右ぃぃ ヨシ!!
+3. 日本
 
 ---
 

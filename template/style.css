@@ -13,7 +13,7 @@
 
 /* 基本 */
 section {
-  padding: 15px 45px;
+  padding: 1em 2em;
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -25,7 +25,7 @@ section > h2 {
   color: var(--color-primary);
 }
 section:not(.lead) > h2 {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 section p {
@@ -48,6 +48,37 @@ section ul > li:before {
   position: absolute;
   content: "";
   background-color: var(--color-primary);
+}
+
+section ol {
+  counter-reset: number;
+}
+section ol li {
+  font-size: 0.9em;
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1em;
+}
+section ol li:before {
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-dimmed-background);
+
+  counter-increment: number;
+  border-radius: 50%;
+  font-size: 0.7em;
+  width: 1.8em;
+  height: 1.8em;
+  top: 1.53em;
+  left: -2.6em;
+  display: grid;
+  place-items: center;
+  place-content: center;
+
+  position: absolute;
+  content: counter(number);
+  margin-top: -1.4em;
 }
 
 section a {
@@ -251,10 +282,14 @@ section.chapter-divider > .left {
 }
 section.chapter-divider > .right {
   grid-area: right;
-  counter-reset: number;
+}
+section.chapter-divider h2 {
+  font-size: 1.75em;
+  margin: 0.3em 0;
 }
 section.chapter-divider ol > li {
   position: relative;
+  font-size: 1em;
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 2em;
@@ -276,7 +311,8 @@ section.chapter-divider ol > li:before {
   content: counter(number, decimal-leading-zero);
   margin-top: -1.4em;
   color: var(--color-primary);
-  border: dotted 2px var(--color-primary);
+  border: dashed 1px var(--color-primary);
+  background-color: var(--color-background);
 }
 section.chapter-divider ol > li:has(strong) {
   color: var(--color-primary);
@@ -291,5 +327,5 @@ section.chapter-divider ol > li:has(s) {
 }
 section.chapter-divider ol > li:has(s):before {
   color: var(--color-ghost);
-  border: dotted 2px var(--color-ghost);
+  border: dashed 1px var(--color-ghost);
 }
