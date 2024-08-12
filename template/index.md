@@ -200,10 +200,9 @@ tadashi-aikawa
   - LEVEL2
     - LEVEL3
       - LEVEL4
-        - LEVEL5
-          - LEVEL6
-            - LEVEL7
-              - LEVEL8
+        - は続くよどこまでも...
+- 推奨はLEVEL1のみ
+  - どうしても必要な場合のみLEVEL2
 
 1. 番号付きリスト
 1. 数値は

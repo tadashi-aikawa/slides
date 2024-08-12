@@ -91,10 +91,11 @@ section marp-pre {
 
 /* 箇条書き */
 section ul > li {
-  font-size: 0.9em;
+  font-size: 0.85em;
   position: relative;
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0.5em;
 }
 section ul > li:before {
   border-radius: 50%;
@@ -112,7 +113,7 @@ section ol {
   counter-reset: number;
 }
 section ol li {
-  font-size: 0.9em;
+  font-size: 0.85em;
   position: relative;
   list-style-type: none;
   padding-left: 0;
