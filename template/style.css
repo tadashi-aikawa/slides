@@ -356,6 +356,37 @@ section.chapter-divider ol > li:has(s):before {
 /******************************
  * Grid layouts
  *****************************/
+section.slide-title {
+  color: var(--color-dimmed-background);
+  background-color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  grid-template:
+    "title         " auto
+    "name          " 1em
+    "...           " 1em
+    "date-and-event" 1em
+    "...           " 1em;
+}
+section.slide-title .title {
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  grid-area: title;
+  color: var(--color-dimmed-background);
+}
+section.slide-title .name {
+  font-weight: bolder;
+  font-size: 1.3em;
+  grid-area: name;
+  color: var(--color-dimmed-background);
+}
+section.slide-title .date-and-event {
+  font-size: 0.9em;
+  grid-area: date-and-event;
+  color: var(--color-dimmed-background);
+}
+
 section.grid-5-5 {
   display: grid;
   grid-template:

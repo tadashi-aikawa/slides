@@ -7,11 +7,14 @@ paginate: true
 <script src="https://cdn.tailwindcss.com/3.4.4"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } }</script>
 
-# テンプレート
+<!-- _class: slide-title -->
 
-##### yyyy-mm-dd title
-
-tadashi-aikawa
+<div class="title">
+  <div>エンジニアが本気を出して</div>
+  <div>Marpのテンプレートを作ってみた話</div>
+</div>
+<div class="name">Tadashi Aikawa</div>
+<div class="date-and-event">2024/08/12 Minerva Lightning Talks</div>
 
 ---
 
