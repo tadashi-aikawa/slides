@@ -9,6 +9,12 @@
   --color-secondary: #ce579b;
   --color-dimmed-background: #f8f6f1;
   --color-ghost: rgb(184, 188, 197);
+  --color-filter-foreground: brightness(0) saturate(100%) invert(33%) sepia(0%)
+    saturate(4%) hue-rotate(152deg) brightness(94%) contrast(81%);
+  --color-filter-primary: brightness(0) saturate(100%) invert(57%) sepia(24%)
+    saturate(971%) hue-rotate(101deg) brightness(102%) contrast(89%);
+  --color-filter-secondary: brightness(0) saturate(100%) invert(49%) sepia(39%)
+    saturate(902%) hue-rotate(275deg) brightness(86%) contrast(85%);
 }
 
 /* フォント*/
@@ -231,6 +237,15 @@ section p:has(> img[alt~="center"]) {
 }
 section img[alt~="full"] {
   width: 100%;
+}
+section img[alt~="foreground"] {
+  filter: var(--color-filter-foreground);
+}
+section img[alt~="primary"] {
+  filter: var(--color-filter-primary);
+}
+section img[alt~="secondary"] {
+  filter: var(--color-filter-secondary);
 }
 
 section .label {

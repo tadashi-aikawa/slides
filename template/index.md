@@ -322,23 +322,23 @@ return {
 
 <div class="grid-col-div-3 mt-12">
 
-![muscle w:3em](./resources/muscle.png)
+![owl primary w:3em](./resources/owl.svg)
 
-![muscle w:3em](./resources/muscle.png)
+![owl secondary w:3em](./resources/owl.svg)
 
-![muscle w:3em](./resources/muscle.png)
+![owl foreground w:3em](./resources/owl.svg)
 
 </div>
 
 <div class="grid-col-div-3 pt-4 pb-6">
-  <div class="text-3xl font-bold">1から何かをつくる</div>
+  <div class="text-3xl font-bold">フクロウ</div>
   <div class="text-3xl font-bold">Productivity</div>
   <div class="text-3xl font-bold">ふんわり</div>
 </div>
 
 <div class="grid-col-div-3" style="place-items: start;">
   <div class="text-2xl">
-  提供したい価値があり、作りたいモノや予定がハッキリ決まっていない状態から、動くモノをつくりながらプロダクトに仕上げていくのが好き。特に自分が使うモノだとやる気10倍。
+  フクロウは私のトレードマーク。知的で可愛さを兼ね備えているのが好き。普段はみみぞうのアイコンを使っているけど、みみぞうもフクロウ。みみずくっぽい名前だけで実はフクロウ。
   </div>
   <div class="text-2xl">
   個人やチームの生産性を向上させるようなツール・仕組みをつくるのが好き。ただし、当人たちが望んでいる場合に限るので、外からの圧力で無理やり改善を進めていくのは好きじゃない。
