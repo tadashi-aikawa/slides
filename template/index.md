@@ -20,45 +20,53 @@ paginate: true
 
 ![bg left:30%](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/Pasted%20image%2020210605212644.png)
 
+<style scoped>
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+</style>
+
 <div>
   <h1 class="text-foreground">Tadashi Aikawa</h1>
   <h5 class="text-dimmed">Productivity Creator since 2010</h5>
   <div class="mt-12 space-y-2 text-2xl">
-    <div>
+    <div class="item">
       <div class="label">OS</div>
-      <span class="pl-3">Windows <small>(開発はUbuntu on WSL)</small></span>
+      <span>Windows <small>(開発はUbuntu on WSL)</small></span>
     </div>
-    <div>
+    <div class="item">
       <div class="label">言語</div>
-      <span class="pl-3">TypeScript >> Python = Go = Rust >> Lua</span>
+      <span>TypeScript >> Python = Go = Rust >> Lua</span>
     </div>
-    <div>
+    <div class="item">
       <div class="label">エディタ</div>
-      <span class="pl-3">Neovim / Obsidian</span>
+      <span>Neovim / Obsidian</span>
     </div>
-    <div>
+    <div class="item">
       <div class="label">デバイス</div>
-      <span class="pl-3">EIZO / HHKB Studio / SlimBlade</span>
+      <span>EIZO / HHKB Studio / SlimBlade</span>
     </div>
-    <div>
+    <div class="item">
       <div class="label">サイト</div>
-      <a class="pl-3" href="https://minerva.mamansoft.net/">Minerva</a>
-      <a class="pl-3" href="https://github.com/tadashi-aikawa">GitHub</a>
-      <a class="pl-3" href="https://bsky.app/profile/tadashi-aikawa.bsky.social">
+      <a href="https://minerva.mamansoft.net/">Minerva</a>
+      <a href="https://github.com/tadashi-aikawa">GitHub</a>
+      <a href="https://bsky.app/profile/tadashi-aikawa.bsky.social">
         Bluesky
       </a>
     </div>
-    <div>
+    <div class="item">
       <div class="label">好き</div>
-      <span class="pl-3">創作活動・温泉・甘味・動物(ぬいぐるみ含む)</span>
+      <span>創作活動・温泉・甘味・動物(ぬいぐるみ含む)</span>
     </div>
-    <div>
+    <div class="item">
       <div class="label">苦手</div>
-      <span class="pl-3">お酒・車・勉強</span>
+      <span>お酒・車・勉強</span>
     </div>
-    <div>
+    <div class="item">
       <div class="label">楽しい仕事</div>
-      <span class="pl-3">個人やチームの生産性を上げて成果に繋げる</span>
+      <span>個人やチームの生産性を上げて成果に繋げる</span>
     </div>
   </div>
 </div>
