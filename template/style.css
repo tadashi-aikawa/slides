@@ -86,6 +86,7 @@ section code:not([class^="language-"]) {
   background-color: var(--color-dimmed-background);
 }
 section code[class^="language-"] {
+  font-size: 0.6em;
   padding: 1em;
   color: var(--color-foreground);
   background-color: var(--color-dimmed-background);
@@ -123,6 +124,7 @@ section ol li {
   position: relative;
   list-style-type: none;
   padding-left: 0;
+  margin-left: 0.5em;
   margin-bottom: 1em;
 }
 section ol li:before {
@@ -166,6 +168,11 @@ section s {
 footer {
   text-align: center;
   font-size: 0.5em;
+  margin-bottom: 0.3em;
+}
+footer a {
+  text-decoration: none;
+  color: var(--color-ghost);
 }
 
 /* テーブル */
@@ -330,6 +337,7 @@ section.chapter-divider ol > li {
   font-size: 1em;
   list-style-type: none;
   padding-left: 0;
+  margin-left: 0;
   margin-bottom: 2em;
   color: var(--color-primary);
 }
