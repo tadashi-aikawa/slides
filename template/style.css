@@ -410,6 +410,18 @@ section.slide-title .date-and-event {
   color: var(--color-dimmed-background);
 }
 
+section.slide-last {
+  color: var(--color-dimmed-background);
+  background-color: var(--color-primary);
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+section.slide-last h1,
+section.slide-last h2 {
+  color: var(--color-dimmed-background);
+}
+
 section.grid-5-5 {
   display: grid;
   grid-template:

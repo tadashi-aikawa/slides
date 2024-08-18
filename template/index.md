@@ -285,6 +285,8 @@ return {
 | text-dimmed-background | 暗転背景にテキスト             |
 | borderless-table       | 線のないテーブル               |
 | headless-table         | ヘッダのないテーブル           |
+| slide-title            | タイトルスライド               |
+| slide-last             | 最後のスライド                 |
 
 ---
 
