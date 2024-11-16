@@ -10,10 +10,6 @@ marp -s . --html
 
 ## スライド作成のヒント
 
-### カラーテーマ
-
-https://hue360.herokuapp.com/
-
 ### SVGアイコン
 
 1. #000 のSVGアイコンをダウンロード
