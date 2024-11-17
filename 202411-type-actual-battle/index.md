@@ -80,7 +80,7 @@ style: |
 
 <!-- _class: lead -->
 
-## よくあるVueのSelector実装を通して
+## よくあるVueの選択要素実装(select)を通して
 
 ## 実戦で使えるTypeScriptの型スキルを学ぼう
 
@@ -128,6 +128,10 @@ const message = computed(() => {
   <h1>{{ message }}</h1>
 </template>
 ```
+
+![drop-shadow w:560](./resources/demo.gif)
+
+</div>
 
 </div>
 
@@ -199,7 +203,7 @@ const cakeList = [
   { name: "チーズケーキ" },
 ];
 
-let myCake: any = ""; // myCakeをany型と宣言
+let myCake: any = ""; // myCakeをany型と宣言 (そもそもなぜ空文字?)
 myCake = cakeList[0]; // 代入後もany ({ name: string, fruit: string }型って知ってるのに...)
 
 function getMessage() {
@@ -276,7 +280,7 @@ type Cake = { // Cake型の宣言
   fruit?: string; // フルーツが乗ってるかも?
 }
 
-let myCake: Cake = { name: "ショートケーキ" }; // any -> Cake に変更して、初期値も設定
+let myCake: Cake = { name: "チーズケーキ" }; // any -> Cake に変更して、初期値も設定
 myCake = cakeList[0];
 
 function getMessage() {
@@ -301,7 +305,7 @@ type Cake = {
   fruit?: string;
 }
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0]; // ⛔ string型の値(ショートケーキ) は Cake型の変数(myCake) に入れられないのでエラー！
 
 function getMessage() {
@@ -318,7 +322,7 @@ function getMessage() {
 
 <!-- _class: lead -->
 
-# ウォーミングアップは終わりだ
+# ここまでがウォーミングアップ
 
 ---
 
@@ -335,7 +339,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0];
 
 function getMessage() {
@@ -363,7 +367,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0];
 
 function getMessage() {
@@ -391,7 +395,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0];
 
 function getMessage() {
@@ -419,7 +423,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0];
 
 function getMessage() {
@@ -447,7 +451,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" }; // 2.myCakeはCake型 (let宣言なので右辺の値は関係ない)
+let myCake: Cake = { name: "チーズケーキ" }; // 2.myCakeはCake型 (let宣言なので右辺の値は関係ない)
 myCake = cakeList[0];
 
 function getMessage() {
@@ -481,7 +485,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0];
 
 function getMessage() {
@@ -509,7 +513,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0]; // ⛔ cakeList[0]はmyCakeに代入できない (cakeList[0]["name"]の値はmyCake["name"]に代入できないから)
 
 function getMessage() {
@@ -537,7 +541,7 @@ type Cake = {
   fruit?: string;
 };
 
-let myCake: Cake = { name: "ショートケーキ" };
+let myCake: Cake = { name: "チーズケーキ" };
 myCake = cakeList[0]; // 3.Cake型 に Cake型 の代入なので問題なし
 
 function getMessage() {
@@ -559,6 +563,34 @@ function getMessage() {
 ---
 
 ## 先ほどのコードからswitch文にフォーカスして抽出する
+
+```typescript
+const cakeList: Cake[] = [ 
+  { name: "ショートケーキ", fruit: "イチゴ" }, 
+  { name: "チーズケーキ" },
+];
+
+type Cake = {
+  name: "ショートケーキ" | "チーズケーキ";
+  fruit?: string;
+};
+
+let myCake: Cake = { name: "チーズケーキ" };
+myCake = cakeList[0]; 
+
+function getMessage() {
+  switch (myCake.name) {
+    case "ショットケーキ": 
+      return `上は ${myCake.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+  }
+}
+```
+
+---
+
+## 先ほどのコードからswitch文に*フォーカスして抽出する*
 
 ```typescript
 type Cake = {
@@ -892,93 +924,154 @@ function getMessage() {
       return new ExhaustiveError(myCake); // myCake.name -> myCake に変更 (詳細は時間の都合で割愛)
   }
 }
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-
-## constは変数への*再代入*を禁止するだけ
-
-```typescript
-const cakeList = [
-  { name: "ショートケーキ", fruit: "イチゴ" },
-  { name: "チーズケーキ" },
-];
-
-cakeList = []; // ⛔ これはエラー
-
-cakeList[0] = { name: "チョコレートケーキ" }; // これはOK
-cakeList[0].name = "チョコレートケーキ"; // これはOK
-```
-
-`cakeList[0]["name"]` は `string型` であるとしか言えない
 
 ---
 
 <!-- _class: lead -->
 
-# そんな貴方に as const
+# swtich文のフォーカスを解いてみる
 
 ---
 
-## as constは*変数に代入した値そのものを変更不可にする*
+## これでOK?
 
 ```typescript
-const cakeList = [
+const cakeList: Cake[] = [
   { name: "ショートケーキ", fruit: "イチゴ" },
   { name: "チーズケーキ" },
-] as const; // as const を追加
+];
 
-cakeList = []; // ⛔ これはエラー
-
-cakeList[0] = { name: "チョコレートケーキ" }; // ⛔ これもエラー
-cakeList[0].name = "チョコレートケーキ"; // ⛔ これもエラー
-```
-
-つまり`cakeList[0]["name"]` は `"ショートケーキ"型` であると言える
-
----
-
-## as constを適応してみる
-
-```typescript
-const cakeList = [
-  { name: "ショートケーキ", fruit: "イチゴ" },
-  { name: "チーズケーキ" },
-] as const; // as const を追加
-
-type Cake = {
-  name: "ショートケーキ" | "チーズケーキ";
-  fruit?: string;
+type SpongeCake = {
+  name: "ショートケーキ";
+  fruit: "イチゴ";
 };
+type Cheesecake = {
+  name: "チーズケーキ";
+};
+type Cake = SpongeCake | Cheesecake;
 
-let myCake: Cake = { name: "ショートケーキ" };
-myCake = cakeList[0]; // 1.{ readonly name: "ショートケーキ"; readonly fruit: "イチゴ"; }型 と推論される
+let myCake: Cake = { name: "チーズケーキ" };
+myCake = cakeList[0];
 
 function getMessage() {
-  switch (myCake.name) { // 2.myCake.nameの値は "ショートケーキ" or "チーズケーキ"
-    case "ショットケーキ":// ⛔ 3.ここも無事エラーになる
+  switch (myCake.name) {
+    case "ショートケーキ":
       return `上は ${myCake.fruit} だ！`;
     case "チーズケーキ":
       return `チーズケーキおいしい!`;
+    default:
+      return new ExhaustiveError(myCake); // (ExhaustiveErrorの定義は割愛)
   }
 }
+```
+
+---
+
+<!-- _class: lead -->
+
+# 今度は型定義にフォーカスしてみる
+
+---
+
+## 型定義部分にだけフォーカス
+
+```typescript
+const cakeList: Cake[] = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+type SpongeCake = {
+  name: "ショートケーキ";
+  fruit: "イチゴ";
+};
+type Cheesecake = {
+  name: "チーズケーキ";
+};
+type Cake = SpongeCake | Cheesecake;
+
+let myCake: Cake = { name: "チーズケーキ" };
+myCake = cakeList[0];
+
+function getMessage() {
+  switch (myCake.name) {
+    case "ショートケーキ":
+      return `上は ${myCake.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+    default:
+      return new ExhaustiveError(myCake); 
+  }
+}
+```
+
+---
+
+## 型定義部分にだけ*フォーカス*
+
+```typescript
+const cakeList: Cake[] = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+type SpongeCake = {
+  name: "ショートケーキ";
+  fruit: "イチゴ";
+};
+type Cheesecake = {
+  name: "チーズケーキ";
+};
+type Cake = SpongeCake | Cheesecake;
+```
+
+---
+
+## ケーキの種類を増やしてみる
+
+```typescript
+const cakeList: Cake[] = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+  { name: "モンブラン", fruit: "栗" }, // 追加
+  { name: "チョコレートケーキ" }, // 追加
+];
+
+type SpongeCake = {
+  name: "ショートケーキ";
+  fruit: "イチゴ";
+};
+type Cheesecake = {
+  name: "チーズケーキ";
+};
+type MontBlanc = { // 追加
+  name: "モンブラン";
+  fruit: "栗";
+};
+type ChocolateCake = { // 追加
+  name: "チョコレートケーキ";
+};
+type Cake = SpongeCake | Cheesecake | MontBlanc | ChocolateCake; // 追加
+```
+
+---
+
+<!-- _class: lead -->
+
+# なんか面倒くさくない...?
+
+---
+
+## 候補が決まっているなら変更は最低限にしたい
+
+```typescript
+const cakeList = [ // cakeListに追加したらCake型に自動で反映されてほしい
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+type Cake = ??? // ここをイイ感じに定義して1行で済ませたい
 ```
 
 ---
@@ -988,3 +1081,355 @@ function getMessage() {
 # どうすればいいか?
 
 ---
+
+## typeof型演算子とインデックスアクセス型を使う
+
+```typescript
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+type Cake = (typeof cakeList)[number]; // typeof型演算子でcakeList(値)から型を生成し、[number]でその配列要素の型を表現する
+```
+
+---
+
+## *typeof型演算子*とインデックスアクセス型を使う
+
+```typescript
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+type Cake = (typeof cakeList)[number]; // typeof型演算子でcakeList(値)から型を生成し、[number]でその配列要素の型を表現する
+```
+
+`推論の過程`
+
+<div class="grid-col-5-5" style="align-items: baseline">
+
+```typescript
+type (typeof cakeList) = ({ // 配列と推論
+    name: string;
+    fruit: string;
+} | {
+    name: string;
+    fruit?: undefined;
+})[]
+```
+
+</div>
+
+---
+
+## *typeof型演算子*と*インデックスアクセス型*を使う
+
+```typescript
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+type Cake = (typeof cakeList)[number]; // typeof演算子でcakeList(値)から型を生成し、[number]でその配列要素の型を表現する
+```
+
+`推論の過程`
+
+<div class="grid-col-5-5" style="align-items: baseline">
+
+```typescript
+type (typeof cakeList) = ({
+    name: string;
+    fruit: string;
+} | {
+    name: string;
+    fruit?: undefined;
+})[]
+```
+
+```typescript
+type (typeof cakeList)[number] = {
+    name: string;
+    fruit: string;
+} | {
+    name: string;
+    fruit?: undefined;
+}
+```
+
+</div>
+
+---
+
+## *as const* で cakeListを*不変*にする
+
+```typescript
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+] as const; // as const を追加
+
+type Cake = (typeof cakeList)[number];
+```
+
+---
+
+## *as const* で cakeListを*不変*にする
+
+```typescript
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+] as const; // as const を追加
+
+type Cake = (typeof cakeList)[number];
+```
+
+`推論の過程`
+
+<div class="grid-col-7-3" style="align-items: baseline">
+
+```typescript
+type (typeof cakeList) = readonly [{ // 配列ではなくタプル型に推論される！
+    readonly name: "ショートケーキ";
+    readonly fruit: "イチゴ";
+}, {
+    readonly name: "チーズケーキ";
+}]
+```
+
+</div>
+
+---
+
+## *as const* で cakeListを*不変*にする
+
+```typescript
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+] as const; // as const を追加
+
+type Cake = (typeof cakeList)[number];
+```
+
+`推論の過程`
+
+<div class="grid-col-5-5" style="align-items: baseline">
+
+```typescript
+type (typeof cakeList) = readonly [{
+    readonly name: "ショートケーキ";
+    readonly fruit: "イチゴ";
+}, {
+    readonly name: "チーズケーキ";
+}]
+```
+
+```typescript
+type (typeof cakeList)[number] = {
+    readonly name: "ショートケーキ";
+    readonly fruit: "イチゴ";
+} | {
+    readonly name: "チーズケーキ";
+}
+```
+
+</div>
+
+---
+
+<!-- _class: lead -->
+
+# 話を戻すと...
+
+---
+
+## ケーキの種類を増やすために必要な型と作業が...
+
+```typescript
+const cakeList: Cake[] = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+  { name: "モンブラン", fruit: "栗" }, // 追加
+  { name: "チョコレートケーキ" }, // 追加
+];
+
+type SpongeCake = {
+  name: "ショートケーキ";
+  fruit: "イチゴ";
+};
+type Cheesecake = {
+  name: "チーズケーキ";
+};
+type MontBlanc = { // 追加
+  name: "モンブラン";
+  fruit: "栗";
+};
+type ChocolateCake = { // 追加
+  name: "チョコレートケーキ";
+};
+type Cake = SpongeCake | Cheesecake | MontBlanc | ChocolateCake; // 追加
+```
+
+---
+
+## 実際はここまでスリム化できる
+
+```typescript
+const cakeList: Cake[] = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+  { name: "モンブラン", fruit: "栗" },
+  { name: "チョコレートケーキ" },
+] as const; // as const 追加
+
+type Cake = (typeof cakeList)[number]; // typeof型演算子とインデックスアクセス型で表現
+```
+
+---
+
+## ただ、一部の条件に当てはまる場合に限る
+
+```typescript
+const cakeList: Cake[] = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+  { name: "モンブラン", fruit: "栗" },
+  { name: "チョコレートケーキ" },
+] as const; // as const 追加
+
+type Cake = (typeof cakeList)[number]; // typeof型演算子とインデックスアクセス型で表現
+```
+
+- 条件
+  - ビルド時に選択肢(cakeList)が確定している
+    - APIからデータ取得する場合などは使えない
+  - `Cheesecake型`など個々の型を利用することがない
+    - 個々の型を利用するなら**判別されたユニオン型**を使った方がいい
+
+---
+
+<!-- _class: lead -->
+
+# Vueファイルに適当してみよう
+
+---
+
+## TypeScriptのコードのみ (before)
+
+```typescript
+<script setup lang="ts">
+import { computed, ref } from "vue";
+
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+const myCake = ref<any>("");
+
+const message = computed(() => {
+  switch (myCake.value.name) {
+    case "ショートケーキ":
+      return `上は ${myCake.value.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+  }
+});
+</script>
+```
+
+---
+
+## TypeScriptのコードのみ (after)
+
+```typescript
+<script setup lang="ts">
+import { computed, ref } from "vue";
+import { ExhaustiveError } from "./errors"; // ExhaustiveErrorは外部からimport
+
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+] as const; // as const 追加
+type Cake = (typeof cakeList)[number]; // Cake型の定義追加
+
+const myCake = ref<Cake>(cakeList[0]); // 初期値を挿入
+
+const message = computed(() => {
+  switch (myCake.value.name) {
+    case "ショートケーキ":
+      return `上は ${myCake.value.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+    default: // defaultとExhaustiveErrorによる網羅性チェックを追加
+      return new ExhaustiveError(myCake.value);
+  }
+});
+</script>
+```
+
+---
+
+## 全体
+
+<div class="grid-col-5-5" style="align-items: baseline">
+
+```typescript
+<script setup lang="ts">
+import { computed, ref } from "vue";
+import { ExhaustiveError } from "./errors";
+
+const cakeList = [
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+] as const;
+type Cake = (typeof cakeList)[number];
+
+const myCake = ref<Cake>(cakeList[0]);
+
+const message = computed(() => {
+  switch (myCake.value.name) {
+    case "ショートケーキ":
+      return `上は ${myCake.value.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+    default:
+      return new ExhaustiveError(myCake.value);
+  }
+});
+</script>
+```
+
+<div>
+
+```html
+<template>
+  <select v-model="myCake">
+    <option v-for="cake in cakeList" :value="cake">
+      {{ cake.name }}
+    </option>
+  </select>
+  <h1>{{ message }}</h1>
+</template>
+```
+
+```typescript
+-- src/errors.ts
+export class ExhaustiveError extends Error {
+  constructor(
+    value: never,
+    message = `Unsupported type: ${value}`
+  ) {
+    super(message);
+  }
+}
+```
+
+</div>
+
+</div>
+
