@@ -874,13 +874,75 @@ function getMessage() {
 
 ---
 
-<!-- _class: lead -->
+## 次の話でフォーカスしないコードを隠す
 
-# この先不要なコードをカット
+```typescript
+export class ExhaustiveError extends Error
+  constructor(value: never, message = `Unsupported type: ${value}`)
+    super(message);
+  }
+}
+
+type Cake = {
+  name: "ショートケーキ" | "チーズケーキ" | "モンブラン";
+  fruit?: string;
+};
+
+declare const myCake: Cake;
+
+function getMessage() {
+  switch (myCake.name) { // 1.myCake.nameの型は "ショートケーキ" | "チーズケーキ" | "モンブラン"
+    case "ショートケーキ":
+      return `上は ${myCake.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+    case "モンブラン": // 追加
+      return `モンブランはやっぱり ${myCake.fruit} よね!`;
+    default: // 2.なのでdefaultの中には絶対に入らないはず...
+      return new ExhaustiveError(myCake.name) // 3.よってmyCake.nameはnever型と推論されるためエラーは消える
+  }
+}
+```
+
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[never型](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type)
+
+[Exhaustiveness checking](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#exhaustiveness-checking)
+
+</div>
+
+</footer>
 
 ---
 
-## まだ問題がある
+## 次の話で*フォーカスしないコードを隠す*
+
+```typescript
+type Cake = {
+  name: "ショートケーキ" | "チーズケーキ";
+  fruit?: string;
+};
+
+declare const myCake: Cake;
+
+function getMessage() {
+  switch (myCake.name) {
+    case "ショートケーキ":
+      return `上は ${myCake.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+    default:
+      return new ExhaustiveError(myCake.name);
+  }
+}
+```
+
+---
+
+## このコードにはまだ問題がある
 
 ```typescript
 type Cake = {
@@ -928,7 +990,7 @@ function getMessage() {
 
 ---
 
-## 現状の型定義ではこれ以上*Narrowing(型の絞り込み)できない*
+## 現状の型定義では*2通りまでNarrowingされない*
 
 ```typescript
 type Cake = {
@@ -1074,13 +1136,35 @@ function getMessage() {
 
 ---
 
-<!-- _class: lead -->
+## switch文からフォーカスを解く
 
-# swtich文のフォーカスを解いてみる
+```typescript
+type SpongeCake = {
+  name: "ショートケーキ";
+  fruit: "イチゴ";
+};
+type Cheesecake = {
+  name: "チーズケーキ";
+};
+type Cake = SpongeCake | Cheesecake;
+
+declare const myCake: Cake;
+
+function getMessage() {
+  switch (myCake.name) {
+    case "ショートケーキ":
+      return `上は ${myCake.fruit} だ！`;
+    case "チーズケーキ":
+      return `チーズケーキおいしい!`;
+    default:
+      return new ExhaustiveError(myCake);
+  }
+}
+```
 
 ---
 
-## これでOK?
+## switch文から*フォーカスを解く*
 
 ```typescript
 const cakeList: Cake[] = [
@@ -1701,9 +1785,10 @@ export class ExhaustiveError extends Error {
 
 <div style="position: absolute; bottom: -10px; right: 0">
 
-![w:320](./resources/typescript-stand-smile.webp)
+![w:320](./resources/typescript-smile-w.webp)
 
 </div>
 
-<h5 class="text-primary" style="position: absolute; bottom: 180px; right: 280px; transform: rotate(4deg)">
-</h5>
+<h4 class="text-primary" style="position: absolute; bottom: 80px; right: 320px; transform: rotate(4deg)">
+おたよりまってますぞー
+</h4>
