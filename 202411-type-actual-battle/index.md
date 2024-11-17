@@ -1706,5 +1706,4 @@ export class ExhaustiveError extends Error {
 </div>
 
 <h5 class="text-primary" style="position: absolute; bottom: 180px; right: 280px; transform: rotate(4deg)">
-   ご感想・ご質問 お待ちしてまーす
 </h5>
