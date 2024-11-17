@@ -298,6 +298,12 @@ function getMessage() {
 }
 ```
 
+<footer>
+
+[any型](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any)
+
+</footer>
+
 ---
 
 ## 実際に起こる悲劇
@@ -580,6 +586,18 @@ function getMessage() {
 }
 ```
 
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[リテラル型(Literal Types)](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types)
+
+[ユニオン型(Union Types)](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
+
+</div>
+
+</footer>
+
 ---
 
 ## それだけでは*myCakeの代入処理がエラー*になる
@@ -744,7 +762,7 @@ function getMessage() {
 
 ---
 
-## never型を使ってExhaustiveErrorエラーをつくる
+## never型を使って*ExhaustiveErrorエラー*をつくる
 
 ```typescript
 export class ExhaustiveError extends Error { // 新しく追加したエラークラス
@@ -771,6 +789,18 @@ function getMessage() {
   }
 }
 ```
+
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[never型](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type)
+
+[Exhaustiveness checking](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#exhaustiveness-checking)
+
+</div>
+
+</footer>
 
 ---
 
@@ -803,6 +833,18 @@ function getMessage() {
   }
 }
 ```
+
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[never型](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-never-type)
+
+[Exhaustiveness checking](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#exhaustiveness-checking)
+
+</div>
+
+</footer>
 
 ---
 
@@ -902,6 +944,12 @@ const cakes: Cake[] = [ // 今の定義では以下6パターンのいずれもO
 ];
 ```
 
+<footer>
+
+[Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+
+</footer>
+
 ---
 
 <!-- _class: lead -->
@@ -931,6 +979,12 @@ const cakes: Cake[] = [
   { name: "チーズケーキ", fruit: "マロン" },
 ];
 ```
+
+<footer>
+
+[判別されたユニオン型(Discriminated unions)](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions)
+
+</footer>
 
 ---
 
@@ -1175,6 +1229,18 @@ const cakeList = [
 type Cake = (typeof cakeList)[number]; // typeof型演算子でcakeList(値)から型を生成し、[number]でその配列要素の型を表現する
 ```
 
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[typeof型演算子(Typeof Type Operator)](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html)
+
+[インデックスアクセス型(Indexed Access Types)](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
+
+</div>
+
+</footer>
+
 ---
 
 ## *typeof型演算子*とインデックスアクセス型を使う
@@ -1203,6 +1269,18 @@ type (typeof cakeList) = ({ // 配列と推論
 ```
 
 </div>
+
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[typeof型演算子(Typeof Type Operator)](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html)
+
+[インデックスアクセス型(Indexed Access Types)](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
+
+</div>
+
+</footer>
 
 ---
 
@@ -1243,6 +1321,18 @@ type (typeof cakeList)[number] = {
 
 </div>
 
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[typeof型演算子(Typeof Type Operator)](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html)
+
+[インデックスアクセス型(Indexed Access Types)](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
+
+</div>
+
+</footer>
+
 ---
 
 ## *as const* で cakeListを*不変*にする
@@ -1255,6 +1345,12 @@ const cakeList = [
 
 type Cake = (typeof cakeList)[number];
 ```
+
+<footer>
+
+[as const](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-inference)
+
+</footer>
 
 ---
 
@@ -1283,6 +1379,12 @@ type (typeof cakeList) = readonly [{ // 配列ではなくタプル型に推論�
 ```
 
 </div>
+
+<footer>
+
+[as const](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-inference)
+
+</footer>
 
 ---
 
@@ -1320,6 +1422,12 @@ type (typeof cakeList)[number] = {
 ```
 
 </div>
+
+<footer>
+
+[as const](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-inference)
+
+</footer>
 
 ---
 
