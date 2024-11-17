@@ -1623,3 +1623,12 @@ export class ExhaustiveError extends Error {
 
 </div>
 
+---
+
+## まとめ
+
+- *文字列リテラルのユニオン型*を使って候補をstringより**Narrowing**しよう
+- *ExhausitiveError*を使って**caseの実装漏れ**を防ごう
+- **可変候補**には *判別されたユニオン型*を使って**Narrowing**しよう (APIなど)
+- **固定候補**には *typeof型演算子 + インデックスアクセス型 + as const* を使おう
+
