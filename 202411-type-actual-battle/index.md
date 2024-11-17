@@ -14,7 +14,11 @@ style: |
 <!-- _class: slide-title -->
 
 <div class="title">
-  <div>実戦 型パズル</div>
+  <div class="pb-8">
+    <span class="mr-4">実戦</span>
+    <span>型パズル</span>
+  </div>
+  <img src="./resources/language-typescript.svg" style="width: 4em; filter: var(--color-filter-white)" />
 </div>
 <div class="name">Tadashi Aikawa</div>
 <div class="date-and-event">2024/11/17 Minerva Lightning Talks</div>
@@ -41,7 +45,7 @@ style: |
     </div>
     <div class="item">
       <div class="label">言語</div>
-      <span>TypeScript >> Python = Go = Rust >> Lua</span>
+      <span>TypeScript >> Python = Go = Rust > Lua</span>
     </div>
     <div class="item">
       <div class="label">エディタ</div>
@@ -78,11 +82,89 @@ style: |
 
 ---
 
+![bg left:30%](https://publish-01.obsidian.md/access/35d05cd1bf5cc500e11cc8ba57daaf88/Notes/attachments/Pasted%20image%2020210605212644.png)
+
+<style scoped>
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+.item .label {
+  font-size: 0.8em;
+  font-weight: bold;
+  height: 1.75em;
+}
+</style>
+
+<div>
+  <h3 class="text-foreground">Web系 年表</h3>
+  <div class="mt-12 space-y-2 text-2xl">
+    <div class="item">
+      <div class="label">2010年</div>
+      <span>エンジニアとして仕事をはじめる</span>
+    </div>
+    <div class="item">
+      <div class="label">2012年</div>
+      <span>はじめて<b>JavaScript</b>でモノをつくる</span>
+    </div>
+    <div class="item">
+      <div class="label">2015年</div>
+      <span>はじめて<b>React</b>でモノをつくる</span>
+    </div>
+    <div class="item">
+      <div class="label" style="background-color: var(--color-primary);">2016年</div>
+      <span>はじめて<b style="color: var(--color-primary)">TypeScript</b>でモノをつくる</span>
+    </div>
+    <div class="item">
+      <div class="label">2017年</div>
+      <span>はじめて<b>Angular2</b>でモノをつくる</span>
+    </div>
+    <div class="item">
+      <div class="label" style="height: 3em; line-height: 3em;">2018年</div>
+      <div>
+        <div>はじめて<b>Vue2</b>でモノをつくる</div>
+        <div>はじめて<b>VSCode拡張</b>をつくる</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="label">2019年</div>
+      <span>はじめて<b>Chrome拡張</b>をつくる</span>
+    </div>
+    <div class="item">
+      <div class="label" style="height: 3em; line-height: 3em;">2020年</div>
+      <div>
+        <div>はじめて<b>Vue3</b>でモノをつくる</div>
+        <div>はじめて<b>Svelte</b>でモノをつくる</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="label">2021年</div>
+      <span>はじめて<b>Obsidianプラグイン</b>をつくる</span>
+    </div>
+    <div class="item">
+      <div class="label" style="height: 3em; line-height: 3em;">2023年</div>
+      <div>
+        <div>はじめて<b>Deno</b>でモノをつくる</div>
+        <div>はじめて<b>Bun</b>でモノをつくる</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="label">2024年</div>
+      <span>はじめて<b>Neovimプラグイン</b>をつくる</span>
+    </div>
+  </div>
+</div>
+
+---
+
 <!-- _class: lead -->
 
 ## よくあるVueの選択要素実装(select)を通して
 
 ## 実戦で使えるTypeScriptの型スキルを学ぼう
+
+<span class="tag-note">本日のお題</span>
 
 ---
 
