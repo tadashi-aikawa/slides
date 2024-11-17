@@ -205,7 +205,7 @@ footer {
 }
 footer a::before {
   content: "🌐";
-  filter: grayscale(1); /* グレー化 */
+  filter: grayscale(1);
 }
 footer a {
   text-decoration: none;
