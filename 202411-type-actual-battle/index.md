@@ -168,6 +168,14 @@ style: |
 
 ---
 
+<!-- _class: lead -->
+
+## **25分のネタ**を*9分*で話します
+
+### 分かっている人がなんとかついていけるレベルかなと
+
+---
+
 ## ケーキを選択するvueファイル
 
 <div class="grid-col-5-5" style="align-items: start">
@@ -356,6 +364,12 @@ function getMessage() {
 
 # どうすればいいの?
 
+<div style="position: absolute; bottom: -10px; right: 0">
+
+![w:320](./resources/typescript-faq.webp)
+
+</div>
+
 ---
 
 ## *Cake型*を定義し、変数myCakeの型は*Cake型*だと宣言する
@@ -410,7 +424,7 @@ function getMessage() {
 
 <!-- _class: lead -->
 
-# ここまでがウォーミングアップ
+# ウォーミングアップ終了
 
 ---
 
@@ -557,6 +571,12 @@ function getMessage() {
 <!-- _class: lead -->
 
 # どうすればいいの?
+
+<div style="position: absolute; bottom: -10px; right: 0">
+
+![w:320](./resources/typescript-faq.webp)
+
+</div>
 
 ---
 
@@ -760,6 +780,12 @@ function getMessage() {
 
 # どうすればいいの?
 
+<div style="position: absolute; bottom: -10px; right: 0">
+
+![w:320](./resources/typescript-faq.webp)
+
+</div>
+
 ---
 
 ## never型を使って*ExhaustiveErrorエラー*をつくる
@@ -878,7 +904,7 @@ function getMessage() {
 
 ---
 
-## ショートケーキのイチゴが必ず乗っていると認識してくれない
+## ショートケーキのfruitが*イチゴである*と推論してくれない
 
 ```typescript
 type Cake = {
@@ -892,30 +918,6 @@ function getMessage() {
   switch (myCake.name) {
     case "ショートケーキ":
       return `上は ${myCake.fruit} だ！`; // myCake.fruit は string | undefined型 と推論される
-    case "チーズケーキ":
-      return `チーズケーキおいしい!`;
-    default:
-      return new ExhaustiveError(myCake.name);
-  }
-}
-```
-
----
-
-## ショートケーキのイチゴが必ず乗っていると認識してくれない
-
-```typescript
-type Cake = {
-  name: "ショートケーキ" | "チーズケーキ";
-  fruit?: string; // fruit? なので string | undefined型 と宣言されている
-};
-
-declare const myCake: Cake;
-
-function getMessage() {
-  switch (myCake.name) {
-    case "ショートケーキ":
-      return `上は ${myCake.fruit} だ！`; // myCake.fruit は "イチゴ"型... せめて string型 と推論してほしい
     case "チーズケーキ":
       return `チーズケーキおいしい!`;
     default:
@@ -956,6 +958,12 @@ const cakes: Cake[] = [ // 今の定義では以下6パターンのいずれもO
 
 # どうすればいいの?
 
+<div style="position: absolute; bottom: -10px; right: 0">
+
+![w:320](./resources/typescript-faq.webp)
+
+</div>
+
 ---
 
 ## *判別されたユニオン型*を使う
@@ -988,7 +996,7 @@ const cakes: Cake[] = [
 
 ---
 
-## SpongeCake型でもCheesecake型でもない値はエラーになる
+## SpongeCake型でもCheesecake型でもない値は*エラーになる*
 
 ```typescript
 type SpongeCake = {
@@ -1012,12 +1020,12 @@ const cakes: Cake[] = [
 
 ---
 
-## (再掲)
+## ショートケーキのfruitが*イチゴである*と推論してくれない
 
 ```typescript
 type Cake = {
   name: "ショートケーキ" | "チーズケーキ";
-  fruit?: string; // fruit? なので string | undefined型 と宣言されている
+  fruit?: string;
 };
 
 declare const myCake: Cake;
@@ -1025,7 +1033,7 @@ declare const myCake: Cake;
 function getMessage() {
   switch (myCake.name) {
     case "ショートケーキ":
-      return `上は ${myCake.fruit} だ！`; // myCake.fruit は "イチゴ"型... せめて string型 と推論してほしい
+      return `上は ${myCake.fruit} だ！`; // myCake.fruit は string | undefined型 と推論される
     case "チーズケーキ":
       return `チーズケーキおいしい!`;
     default:
@@ -1033,6 +1041,8 @@ function getMessage() {
   }
 }
 ```
+
+<span class="tag-note">再掲</span>
 
 ---
 
@@ -1214,7 +1224,13 @@ type Cake = ??? // ここをイイ感じに定義して1行で済ませたい
 
 <!-- _class: lead -->
 
-# どうすればいいか?
+# どうすればいいの?
+
+<div style="position: absolute; bottom: -10px; right: 0">
+
+![w:320](./resources/typescript-faq.webp)
+
+</div>
 
 ---
 
@@ -1293,6 +1309,57 @@ const cakeList = [
 ];
 
 type Cake = (typeof cakeList)[number]; // typeof演算子でcakeList(値)から型を生成し、[number]でその配列要素の型を表現する
+```
+
+`推論の過程`
+
+<div class="grid-col-5-5" style="align-items: baseline">
+
+```typescript
+type (typeof cakeList) = ({
+    name: string;
+    fruit: string;
+} | {
+    name: string;
+    fruit?: undefined;
+})[]
+```
+
+```typescript
+type (typeof cakeList)[number] = {
+    name: string;
+    fruit: string;
+} | {
+    name: string;
+    fruit?: undefined;
+}
+```
+
+</div>
+
+<footer>
+
+<div class="flex justify-center gap-8">
+
+[typeof型演算子(Typeof Type Operator)](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html)
+
+[インデックスアクセス型(Indexed Access Types)](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
+
+</div>
+
+</footer>
+
+---
+
+## constは*代入した値を不変にするわけではない*
+
+```typescript
+const cakeList = [ // cakeListの値は変更できるため (typeof cakeList)[number]["name"] は string型 よりもNarrowingされない
+  { name: "ショートケーキ", fruit: "イチゴ" },
+  { name: "チーズケーキ" },
+];
+
+type Cake = (typeof cakeList)[number];
 ```
 
 `推論の過程`
@@ -1495,7 +1562,7 @@ type Cake = (typeof cakeList)[number]; // typeof型演算子とインデック�
 ```
 
 - 条件
-  - ビルド時に選択肢(cakeList)が確定している
+  - *ビルド時に選択肢(cakeList)が確定している*
     - APIからデータ取得する場合などは使えない
   - `Cheesecake型`など個々の型を利用することがない
     - 個々の型を利用するなら**判別されたユニオン型**を使った方がいい
@@ -1632,3 +1699,12 @@ export class ExhaustiveError extends Error {
 - **可変候補**には *判別されたユニオン型*を使って**Narrowing**しよう (APIなど)
 - **固定候補**には *typeof型演算子 + インデックスアクセス型 + as const* を使おう
 
+<div style="position: absolute; bottom: -10px; right: 0">
+
+![w:320](./resources/typescript-stand-smile.webp)
+
+</div>
+
+<h5 class="text-primary" style="position: absolute; bottom: 180px; right: 280px; transform: rotate(4deg)">
+   ご感想・ご質問 お待ちしてまーす
+</h5>
