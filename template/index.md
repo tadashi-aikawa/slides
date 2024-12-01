@@ -38,7 +38,7 @@ paginate: true
     </div>
     <div class="item">
       <div class="label">言語</div>
-      <span>TypeScript >> Python = Go = Rust >> Lua</span>
+      <span>TypeScript >> Python = Go = Rust > Lua</span>
     </div>
     <div class="item">
       <div class="label">エディタ</div>
