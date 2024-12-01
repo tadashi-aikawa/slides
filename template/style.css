@@ -456,6 +456,31 @@ section.grid-2-8 .right {
   grid-area: right;
 }
 
+section.grid-cross {
+  display: grid;
+  grid-template:
+    "header    header" auto
+    "......    ......" 0.5em
+    "leftup    rightup" 1fr
+    "leftdown  rightdown" 1fr
+    / 50% 50%;
+}
+section.grid-cross h2 {
+  grid-area: header;
+}
+section.grid-cross .leftup {
+  grid-area: leftup;
+}
+section.grid-cross .rightup {
+  grid-area: rightup;
+}
+section.grid-cross .leftdown {
+  grid-area: leftdown;
+}
+section.grid-cross .rightdown {
+  grid-area: rightdown;
+}
+
 section .grid-col-2-8 {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -473,4 +498,13 @@ section .grid-col-div-3 {
   grid-template-columns: 30% 30% 30%;
   column-gap: 5%;
   place-items: center;
+}
+
+/******************************
+ * Flex layouts
+ *****************************/
+section .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
