@@ -75,6 +75,18 @@ paginate: true
 
 ---
 
+## モブプロを始めたのは7~8年前
+
+<iframe src="https://blog.mamansoft.net/2017/12/24/pair-pro-mob-pro-review/" width="100%" height="540" frameborder="0" allowfullscreen class="mt-6"></iframe>
+
+<footer>
+
+[はじめてのペアプロモブプロを読んでこの半年を振り返る](https://blog.mamansoft.net/2017/12/24/pair-pro-mob-pro-review/)
+
+</footer>
+
+---
+
 <!-- _class: chapter-divider -->
 
 <div class="left">
