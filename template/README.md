@@ -14,6 +14,20 @@ marp -s . --html
 
 https://hue360.herokuapp.com/
 
+### Nerd Font
+
+`style.css` で以下を追加。
+
+```css
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+```
+
+スライドには `nf` と `nf-...` クラスを指定。
+
+```html
+<i class="nf nf-cod-github"></i>
+```
+
 ### SVGアイコン
 
 1. #000 のSVGアイコンをダウンロード
