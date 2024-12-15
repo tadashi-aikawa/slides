@@ -237,15 +237,15 @@ paginate: true
 
 ## 最近よく使われているターミナル
 
-| ターミナル         | 開発元           | <i class="nf nf-fa-windows"></i> | <i class="nf nf-fa-apple"></i> | <i class="nf nf-fa-linux"></i> | ★     | 開発言語    |
-| -                  | -                | -                                | -                              | -                              | -     | -           |
-| [Windows Terminal] | Microsoft        | ◎                                |                                |                                | 96.1k | C++         |
-| [Alacritty]        | Alacritty        | o                                | o                              | o                              | 56.9k | Rust        |
-| [kitty]            | Kovid Goyal氏    |                                  | o                              | o                              | 25.0k | 色々        |
-| [Wrap]             | Wrap             |                                  | o                              | o                              | 21.6k | Rust        |
-| [WezTerm]          | Wez Furlong氏    | o                                | o                              | o                              | 18.3k | Rust        |
-| [iTerm2]           | George Nachman氏 |                                  | o                              |                                | 15.5k | Objective-C |
-| [ターミナル]       | Apple            |                                  | ◎                              |                                | -     | ???         |
+| ターミナル         | 開発元           | <i class="nf nf-fa-windows"></i> | <i class="nf nf-fa-apple"></i> | <i class="nf nf-fa-linux"></i> | ★     | 開発言語      |
+| -                  | -                | -                                | -                              | -                              | -     | -             |
+| [Windows Terminal] | Microsoft        | ◎                                |                                |                                | 96.1k | C++           |
+| [Alacritty]        | Alacritty        | o                                | o                              | o                              | 56.9k | Rust          |
+| [kitty]            | Kovid Goyal氏    |                                  | o                              | o                              | 25.0k | 色々          |
+| [Wrap]             | Wrap             |                                  | o                              | o                              | 21.6k | Rust          |
+| [WezTerm]          | Wez Furlong氏    | o                                | o                              | o                              | 18.3k | Rust          |
+| [iTerm2]           | George Nachman氏 |                                  | o                              |                                | 15.5k | Objective-C   |
+| [Wave]             | Wave Terminal    | o                                | o                              | o                              | 6.2k  | TypeScript/Go |
 
 <div class="note gap-8">
 
@@ -255,12 +255,12 @@ paginate: true
 </div>
 
 [Windows Terminal]: https://github.com/microsoft/terminal
-[ターミナル]: https://support.apple.com/ja-jp/guide/terminal/trmld4c92d55/mac
 [iTerm2]: https://iterm2.com/
 [WezTerm]: https://wezfurlong.org/wezterm/
 [Alacritty]: https://alacritty.org/
 [kitty]: https://sw.kovidgoyal.net/kitty/
 [Wrap]: https://www.warp.dev/
+[Wave]: https://www.waveterm.dev/
 
 ---
 
