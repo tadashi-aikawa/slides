@@ -245,7 +245,7 @@ paginate: true
 | [Wrap]             | Wrap             |                                  | o                              | o                              | 21.6k | Rust          |
 | [WezTerm]          | Wez Furlong氏    | o                                | o                              | o                              | 18.3k | Rust          |
 | [iTerm2]           | George Nachman氏 |                                  | o                              |                                | 15.5k | Objective-C   |
-| [Wave]             | Wave Terminal    | o                                | o                              | o                              | 6.2k  | TypeScript/Go |
+| [Wave Terminal]    | Wave             | o                                | o                              | o                              | 6.2k  | TypeScript/Go |
 
 <div class="note gap-8">
 
@@ -260,7 +260,7 @@ paginate: true
 [Alacritty]: https://alacritty.org/
 [kitty]: https://sw.kovidgoyal.net/kitty/
 [Wrap]: https://www.warp.dev/
-[Wave]: https://www.waveterm.dev/
+[Wave Terminal]: https://www.waveterm.dev/
 
 ---
 
