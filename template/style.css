@@ -72,6 +72,15 @@ section:not(.lead) > h2 {
   font-size: 1.1em;
 }
 
+section h2 > em {
+  color: var(--color-dimmed);
+  font-size: 0.65em;
+}
+section h2 > em:before,
+section h2 > em:after {
+  content: "~";
+}
+
 /* 段落 */
 section p {
   font-size: 0.9em;
@@ -490,6 +499,18 @@ section .grid-col-2-8 {
 section .grid-col-3-7 {
   display: grid;
   grid-template-columns: 30% 70%;
+  column-gap: 1em;
+  align-items: center;
+}
+section .grid-col-4-6 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 1em;
+  align-items: center;
+}
+section .grid-col-5-5 {
+  display: grid;
+  grid-template-columns: 50% 50%;
   column-gap: 1em;
   align-items: center;
 }
