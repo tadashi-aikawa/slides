@@ -242,7 +242,7 @@ paginate: true
 | [Windows Terminal] | Microsoft        | ◎                                |                                |                                | 96.1k | C++           |
 | [Alacritty]        | Alacritty        | o                                | o                              | o                              | 56.9k | Rust          |
 | [kitty]            | Kovid Goyal氏    |                                  | o                              | o                              | 25.0k | 色々          |
-| [Wrap]             | Wrap             |                                  | o                              | o                              | 21.6k | Rust          |
+| [Warp]             | Warp             |                                  | o                              | o                              | 21.6k | Rust          |
 | [WezTerm]          | Wez Furlong氏    | o                                | o                              | o                              | 18.3k | Rust          |
 | [iTerm2]           | George Nachman氏 |                                  | o                              |                                | 15.5k | Objective-C   |
 | [Wave Terminal]    | Wave             | o                                | o                              | o                              | 6.2k  | TypeScript/Go |
@@ -259,7 +259,7 @@ paginate: true
 [WezTerm]: https://wezfurlong.org/wezterm/
 [Alacritty]: https://alacritty.org/
 [kitty]: https://sw.kovidgoyal.net/kitty/
-[Wrap]: https://www.warp.dev/
+[Warp]: https://www.warp.dev/
 [Wave Terminal]: https://www.waveterm.dev/
 
 ---
