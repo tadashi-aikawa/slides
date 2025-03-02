@@ -244,7 +244,7 @@ paginate: true
 
 ## なぜDenoか？
 
-1. TypeScriptが `deno run *.ts` でいきなり動く
+1. 数秒でTypeScriptの開発がスタートできる
 2. Linter/Formatter/Test がバンドル済で設定不要
 3. シングルバイナリへビルド可能 (Windows/macOS/Linux)
 
