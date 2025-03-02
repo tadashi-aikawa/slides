@@ -4,6 +4,7 @@
 
 ## 公開スライド一覧
 
+- [Denoはイイゾ](https://tadashi-aikawa.github.io/slides/202503-deno)
 - [ビーマの神殿](https://tadashi-aikawa.github.io/slides/202412-vimmer-level-up)
 - [ターミナルに欠かせない2つのツール mise & Starship](https://tadashi-aikawa.github.io/slides/202408-mise-starship)
 - [実戦 型パズル](https://tadashi-aikawa.github.io/slides/202411-type-actual-battle)
