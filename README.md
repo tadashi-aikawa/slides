@@ -4,6 +4,7 @@
 
 ## 公開スライド一覧
 
+- [Markdown Documentationのススメ](https://tadashi-aikawa.github.io/slides/202508-markdown)
 - [Denoはイイゾ](https://tadashi-aikawa.github.io/slides/202503-deno)
 - [ビーマの神殿](https://tadashi-aikawa.github.io/slides/202412-vimmer-level-up)
 - [ターミナルに欠かせない2つのツール mise & Starship](https://tadashi-aikawa.github.io/slides/202408-mise-starship)
